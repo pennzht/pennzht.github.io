@@ -32,8 +32,8 @@ function d2(S, T){
                   j == 0 ? i :
                   Math.min(D[i-1][j]+1,
                            D[i][j-1]+1,
-                           D[i-1][j-1]+delta(S.charAt(i-1),T.charAt(j-1))),
-                           (i>=2 && j>=2 && S.charAt(i-1)==T.charAt(j-2) && S.charAt(i-2)==T.charAt(j-1)) ? D[i-2][j-2]+1 : Infinity );
+                           D[i-1][j-1]+delta(S.charAt(i-1),T.charAt(j-1)),
+                           (i>=2 && j>=2 && S.charAt(i-1)==T.charAt(j-2) && S.charAt(i-2)==T.charAt(j-1)) ? D[i-2][j-2]+1 : Infinity) );
     }
   }
   return D[S.length][T.length];
