@@ -12,7 +12,7 @@ function d(S, T){
   for(i=0; i<=S.length; i++){
     D[i] = new Object();
     for(j=0; j<=T.length; j++){
-      D[i][j] = ( i==0 ? j : j==0 ? i : Math.min(D[i-1][j]+1, D[i][j-1]+1, D[i-1][j-1]+delta(S.charAt(i-1),T.charAt(i-1))) );
+      if(i==0 || j==0) D[i][j]=i+j; else D[i][j] = Math.min(D[i-1][j]+1, D[i][j-1]+1, D[i-1][j-1]+delta(S.charAt(i-1),T.charAt(i-1)));
     }
   }
   return D[S.length][T.length];
@@ -21,4 +21,5 @@ function d(S, T){
 </head>
 
 <body>
+  Ver. 4.
 </body>
