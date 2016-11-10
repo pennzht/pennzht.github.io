@@ -38,9 +38,48 @@ function d2(S, T){
   }
   return D[S.length][T.length];
 }
+
+// Weighted D--L dist.
+function d3(S, T){
+  var D = new Object();
+  var i, j;
+  var chardist = function(c1, c2){
+    if (c1==c2) return 0;
+    if (c1=='b'&&c2=='p' ||
+        c1=='p'&&c2=='b' ||
+        c1=='d'&&c2=='t' ||
+        c1=='t'&&c2=='d' ||
+        c1=='k'&&c2=='g' ||
+        c1=='g'&&c2=='k' ||
+        c1=='s'&&c2=='z' ||
+        c1=='z'&&c2=='s' ||
+        c1=='f'&&c2=='v' ||
+        c1=='v'&&c2=='f') return 1;
+    return 2;
+  }
+  var addition_weight = function(c){
+    //if (c=='h') return 1;
+    return 2;
+  }
+  var swap_weight = function(c1, c2){
+    return 2; 
+  }
+  for(i=0; i<=S.length; i++){
+    D[i] = new Object();
+    for(j=0; j<=T.length; j++){
+      D[i][j] = ( i == 0 ? j*2 :                // temporary test
+                  j == 0 ? i*2 :
+                  Math.min(D[i-1][j]+addition_weight(S[i-1]),
+                           D[i][j-1]+addition_weight(T[j-1]),
+                           D[i-1][j-1]+chardist(S.charAt(i-1),T.charAt(j-1)),
+                           (i>=2 && j>=2 && S.charAt(i-1)==T.charAt(j-2) && S.charAt(i-2)==T.charAt(j-1)) ? D[i-2][j-2]+swap_weight(S.charAt(i-1),T.charAt(j-1)) : Infinity) );
+    }
+  }
+  return D[S.length][T.length];
+}
   </script>
 </head>
 
 <body>
-  Ver. 6.
+  Ver. 7.
 </body>
