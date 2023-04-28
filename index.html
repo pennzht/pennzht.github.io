@@ -1,6 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    Welcome.
-  </body>
-</html>
+<html><head><link rel="stylesheet" href="index.css"></head><body>
+<div class="logo">Mage of the East</div>
+
+<div class="article"><h1>Saphyra: the Beginning</h1><p>A few years earlier I started developing <a href="https://github.com/pennzht/saphyra"><strong>Saphyra</strong></a> for fun (called <a href="https://github.com/pennzht/saphira">Saphira</a> then). My main goal was to build a simple proof assistant with a minimal kernel supporting multiple theories. I wanted to see how hard it was, both to build a proof assistant and to write proofs in it.</p>
+<p>I restarted the project last year after a three-year hiatus, out of a desire to occupy myself with side projects on weekends. It's a “big clean problem” — one with a very clear goal, plenty of challenges, and an abundance of learning and experimenting opportunities.</p>
+<p>Saphyra aims to be a proof assistant, similar to <a href="https://en.wikipedia.org/wiki/Mizar_system">Mizar</a>, <a href="https://en.wikipedia.org/wiki/HOL_(proof_assistant)">HOL</a>, and <a href="https://en.wikipedia.org/wiki/Coq">Coq</a>. The program helps the user to write formal proofs of mathematical theorems that can be automatically verified, and the proof-writing process is also aided by some level of automation.</p>
+<p>I aim to make Saphyra …</p>
+<ul>
+<li>lean:<ul>
+<li>The kernel — the program that checks the validity and rigor of proofs — should not exceed 1000 lines of code. The more code you have, the harder it is to verify its correctness.</li>
+</ul>
+</li>
+<li>extensible:<ul>
+<li>The system should be easy to extend to support a wide range of logics: classical, intuitionistic, modal, linear; first-order, second-order, higher-order; set theories, type theories, category theories; and other user-defined systems of reasoning.</li>
+</ul>
+</li>
+<li>meta:<ul>
+<li>The system should be able to prove relations <em>between theories</em>, such as that any EFA theorem is also a PRA theorem, and that ZFC proves the consistency of PA. To do this, we would use a relatively weak theory (such as EFA, PRA, PA, or ZF minus ∞) to show how proofs may be converted between theories.</li>
+</ul>
+</li>
+<li>easy to use:<ul>
+<li>Usability may be improved many ways: using a familiar (Python- or Java-like) syntax; providing analysis tools; training AIs to observe common patterns in proofs; and many others.</li>
+</ul>
+</li>
+</ul>
+<p>Saphyra is <a href="https://github.com/pennzht/saphyra">hosted on GitHub</a>; stay tuned!</p></div>
+
+</body></html>
+
