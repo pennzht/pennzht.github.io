@@ -1,0 +1,64 @@
+:root {
+    --light-paper: #f3f3f3;
+    --light-text: black;
+    --light-magic: #00a6ff;
+    --dark-paper: #252525;
+    --dark-text: white;
+    --dark-magic: #006198;
+    --sans: Inter, Inter UI, San Francisco, SF Pro, SF UI, Arial, Verdana, sans-serif;
+    --serif: Linux Libertine, Georgia, Baskerville, serif;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto !important;
+    padding-left: 45px;
+    padding-right: 45px;
+    float: none !important;
+
+    background-color: var(--light-paper);
+    color: var(--light-text);
+    font-family: var(--sans);
+}
+
+a {
+    color: var(--dark-magic);
+    transition: 200ms;
+}
+a:hover {
+    color: white;
+    background-color: var(--dark-magic);
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: var(--dark-paper);
+        color: var(--dark-text);
+    }
+    a {
+        color: var(--light-magic);
+    }
+    a:hover {
+        color: black;
+        background-color: var(--light-magic);
+    }
+}
+
+.logo {
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    font-family: var(--serif);
+}
+
+h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+}
+
+.article {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
