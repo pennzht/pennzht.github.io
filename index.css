@@ -1,37 +1,43 @@
 :root {
-    --light-paper: #f3f3f3;
+    --light-paper: #f8f8f8;
     --light-text: black;
     --light-magic: #00a6ff;
     --dark-paper: #252525;
     --dark-text: white;
-    --dark-magic: #006198;
+    --dark-magic: #006edb;
+    --gray: #808080;
     --sans: Inter, Inter UI, San Francisco, SF Pro, SF UI, Arial, Verdana, sans-serif;
     --serif: Linux Libertine, Georgia, Baskerville, serif;
 }
 
 body {
     max-width: 800px;
-    margin: 0 auto !important;
+    margin: 0 auto;
     padding-left: 45px;
     padding-right: 45px;
-    float: none !important;
+    float: none;
 
     background-color: var(--light-paper);
     color: var(--light-text);
     font-family: var(--sans);
 }
 
+/* html {
+    border-top: 10px var(--light-magic) solid;
+} */
+
 a {
     color: var(--dark-magic);
-    transition: 200ms;
+    transition: background-color 100ms, color 100ms;
 }
+
 a:hover {
     color: white;
     background-color: var(--dark-magic);
 }
 
 @media (prefers-color-scheme: dark) {
-    body{
+    body {
         background-color: var(--dark-paper);
         color: var(--dark-text);
     }
@@ -48,6 +54,7 @@ a:hover {
     font-size: 24px;
     margin-top: 24px;
     margin-bottom: 24px;
+    font-weight: bold;
 
     font-family: var(--serif);
 }
@@ -60,7 +67,9 @@ h1 {
 .article {
     margin-top: 40px;
     margin-bottom: 40px;
+    border-bottom: 1px solid var(--gray);
 }
 
-
-
+hgroup > time {
+    float: right;
+}
