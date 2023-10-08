@@ -36,6 +36,10 @@ a:hover {
     background-color: var(--dark-magic);
 }
 
+.logo > a {
+    text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--dark-paper);
