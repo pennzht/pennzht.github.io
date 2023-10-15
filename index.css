@@ -32,12 +32,13 @@ body {
 
 a {
     color: var(--dark-magic);
-    transition: background-color 100ms, color 100ms;
+    transition: background-color 200ms, color 200ms;
 }
 
 a:hover {
     color: white;
     background-color: var(--dark-magic);
+    transition: none;  /* Fades out, but not in */
 }
 
 .logo > a {
