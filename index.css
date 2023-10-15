@@ -1,4 +1,5 @@
 :root {
+    /* Colors */
     --light-paper: #f8f8f8;
     --light-text: black;
     --light-magic: #00a6ff;
@@ -6,8 +7,10 @@
     --dark-text: white;
     --dark-magic: #006edb;
     --gray: #808080;
-    --sans: Inter, Inter UI, San Francisco, SF Pro, SF UI, Arial, Verdana, sans-serif;
-    --serif: Linux Libertine, Georgia, Baskerville, serif;
+
+    /* Fonts */
+    --prose: "Inter", "Helvetica", "Inter UI", "San Francisco", "SF Pro", "SF UI", "Avenir Next", "Avenir", "Arial", sans-serif;
+    --heading: "Linux Biolinum", "Optima", "Linux Libertine", "Palatino", "Georgia", "Baskerville", serif;
 }
 
 body {
@@ -19,7 +22,8 @@ body {
 
     background-color: var(--light-paper);
     color: var(--light-text);
-    font-family: var(--sans);
+    font-family: var(--prose);
+    font-size: 20px;
 }
 
 /* html {
@@ -60,11 +64,11 @@ a:hover {
     margin-bottom: 24px;
     font-weight: bold;
 
-    font-family: var(--serif);
+    font-family: var(--heading);
 }
 
 h1 {
-    font-family: var(--serif);
+    font-family: var(--heading);
     font-weight: 500;
 }
 
