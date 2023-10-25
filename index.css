@@ -14,10 +14,7 @@
 }
 
 body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 45px;
-    padding-right: 45px;
+    margin: 0;
     float: none;
 
     background-color: var(--light-paper);
@@ -26,23 +23,45 @@ body {
     font-size: 20px;
 }
 
-/* html {
-    border-top: 10px var(--light-magic) solid;
-} */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-a {
+a:not(.special) {
     color: var(--dark-magic);
     transition: background-color 200ms, color 200ms;
 }
 
-a:hover {
+a:focus:not(.special), a:hover:not(.special) {
     color: white;
     background-color: var(--dark-magic);
     transition: none;  /* Fades out, but not in */
+    text-decoration: none;  /* Hides underline when under hover. */
 }
 
-.logo > a {
+.logo {
+    font-size: 24px;
+    margin: 0;
+    padding: 24px 0;
+    font-weight: bold;
+    background-color: var(--dark-magic);
+
+    font-family: var(--heading);
+}
+
+.wsname {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo a {
     text-decoration: none;
+    color: var(--dark-text);
+}
+
+.logo a:hover, .logo a:focus {
+    text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,22 +69,13 @@ a:hover {
         background-color: var(--dark-paper);
         color: var(--dark-text);
     }
-    a {
+    a:not(.special) {
         color: var(--light-magic);
     }
-    a:hover {
+    a:hover:not(.special) {
         color: black;
         background-color: var(--light-magic);
     }
-}
-
-.logo {
-    font-size: 24px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    font-weight: bold;
-
-    font-family: var(--heading);
 }
 
 h1 {
