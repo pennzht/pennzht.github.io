@@ -97,3 +97,16 @@ h1 {
 hgroup > time {
     float: right;
 }
+
+p > time {
+    float: right;
+}
+
+.indexlink {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.indexlink a {
+    text-decoration: none;
+}
