@@ -3,10 +3,13 @@
     --light-paper: #f8f8f8;
     --light-text: black;
     --light-magic: #00a6ff;
+    --light-box: #eeeeee;
     --dark-paper: #252525;
     --dark-text: white;
     --dark-magic: #006edb;
+    --dark-box: #666666;
     --gray: #808080;
+    --box: var(--light-box);
 
     /* Fonts */
     --prose: "Inter", "Helvetica", "Inter UI", "San Francisco", "SF Pro", "SF UI", "Avenir Next", "Avenir", "Arial", sans-serif;
@@ -67,6 +70,9 @@ a:focus:not(.special), a:hover:not(.special) {
 }
 
 @media (prefers-color-scheme: dark) {
+    :root{
+        --box: var(--dark-box);
+    }
     body {
         background-color: var(--dark-paper);
         color: var(--dark-text);
