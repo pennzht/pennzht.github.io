@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Strife / Mage of the East</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2023-11-21">2023-11-21</time><h1>Game of Strife</h1></hgroup><script src="/js/strife.js" defer></script>
+
+<p style="text-align:center;"><canvas id="strife-canvas" style="width:512px;height:512px;image-rendering:pixelated;" width="64" height="64">JS and Canvas support required.</canvas></p>
+<p style="text-align:center;"><input id="strife-restart" type="button" value="Restart (random)" /></p>
+
+<p>This is a multicolor version of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>, where each live cell belongs to one of several <strong>houses</strong> (represented by non-grayscale colors) or is neutral (represented by gray).</p>
+<p>The rules regarding life and death follow the original Game of Life rules (<code>S23/B3</code>). Colors evolve as follows:</p>
+<ul>
+<li>If a live cell stays alive, it will retain its color unless its neighboring live cells were all from the same house — in that case, the cell switches to the same house;</li>
+<li>If a dead cell becomes alive, it will become gray, unless a clear majority of its neighboring live cells came from some common house (or when there is only one house of origin among them) — in that case, the cell joins the same house.</li>
+</ul></div>
+
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
