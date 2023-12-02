@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ambigram Expressions / Mage of the East</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/index.css">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2023-12-02">2023-12-02</time><h1>Ambigram Expressions</h1></hgroup><p>Enter two integers <em>A</em> and <em>B</em>, and receive an <strong>ambigram expression</strong>: one that evaluates to <em>A</em> right-side-up, and <em>B</em> upside-down.</p>
+<p>
+  <input type="text" id="l" value="12" pattern="-?[0-9]+" />
+  <input type="button" id="ldown" value="↓" />
+  <input type="button" id="lup" value="↑" />
+  · <!-- separator -->
+  <input type="text" id="r" value="34" pattern="-?[0-9]+" />
+  <input type="button" id="rdown" value="↓" />
+  <input type="button" id="rup" value="↑" />
+  · <!-- separator -->
+  <input type="button" id="random" value="Random" />
+</p>
+<p>Digit set:
+  <input type="radio" id="cs1" name="charset" data-charset="0689" /><label for="cs1">0689</label>
+  <input type="radio" id="cs2" name="charset" data-charset="06891" checked /><label for="cs2">06891</label>
+  <input type="radio" id="cs3" name="charset" data-charset="0689125" /><label for="cs3">0689125</label>
+</p>
+<p>Font:
+  <input type="radio" id="cf1" name="font" data-font="a" checked /><label for="cf1">Wide</label>
+  <input type="radio" id="cf2" name="font" data-font="b" /><label for="cf2">Narrow</label>
+</p>
+<p>
+  <input type="checkbox" id="cflip" /><label for="cflip">Upside-down</label>
+</p>
+<p style="text-align:center;"><canvas id="ambicanvas" width="120" height="60" style="width:600px;height:300px;image-rendering:pixelated;"></canvas></p>
+<p><span id="a1"></span> → <span id="a2"></span></p>
+<p><span id="b1"></span> → <span id="b2"></span></p>
+
+<script src="/js/ambiformula_data.js" defer></script>
+<script src="/js/ambiformula_font.js" defer></script>
+<script src="/js/ambiformula.js" defer></script></div>
+
+<hr />
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
