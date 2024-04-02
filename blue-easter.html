@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saphyra 2024 Spring Report / Mage of the East</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/icon.svg">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2024-04-02">2024-04-02</time><h1>Saphyra 2024 Spring Report</h1></hgroup><p>Also published <a href="https://github.com/pennzht/saphyra/blob/main/docs/2024-spring.md">on GitHub</a></p>
+<hr />
+
+<p><a href="https://github.com/pennzht/saphyra"><strong>Saphyra</strong></a> is a proof assistant under development, with simplicity and user-friendliness as goals. As of April 1, 2024, it is able to verify some simple statements about natural numbers and automatically prove (propositional) tautologies with ≤ 6 atomic statements (the limit is artificially imposed to avoid long running loops). A Web user interface is also added, so you can prove propositions by clicking on suitable tactics.</p>
+<p>This software is in its early stages and incomplete, but I have plans to continue developing it and improving it.</p>
+<p><a href="https://mage-of-the-east.com/saphyra/js/start.html">Click here to try the Web demo</a></p>
+<h2>Using the Web demo</h2>
+<p>Prove a given goal:</p>
+<ol>
+<li>Click on the “incomplete” tab to enter this workspace.<ul>
+<li><img alt="img" src="./img/op-1.png" /></li>
+</ul>
+</li>
+<li>The red block on the left is a goal not yet proven; click on it to see a list of tactics.<ul>
+<li><img alt="img" src="./img/op-2.png" /></li>
+</ul>
+</li>
+<li>Apply the tactic <code>impl-intro</code> to create a subgoal: proving <em>(B → (A and A) and B)</em> using <em>A</em>.<ul>
+<li><img alt="img" src="./img/op-3.png" /></li>
+</ul>
+</li>
+<li>Use <code>impl-intro</code> on the new goal again.</li>
+<li>Use <code>and-intro</code> twice to destruct the goal into <em>A</em>, <em>A</em>, and <em>B</em>.<ul>
+<li><img alt="img" src="./img/op-4.png" /></li>
+</ul>
+</li>
+<li><em>A</em> is an exact match with the assumption <em>A</em>; use <code>exact-match</code> to resolve.</li>
+<li>Similar for <em>B</em>.</li>
+<li>Now the entire workspace is verified.</li>
+</ol>
+<p>Prove a custom goal:</p>
+<ol>
+<li>Click on the “empty” tab.</li>
+<li>Click on “node #root” on the top-left.<ul>
+<li><img alt="img" src="./img/op-5.png" /></li>
+</ul>
+</li>
+<li>On the right, enter a new goal, such as <code>(-&gt; (and _A _B) (-&gt; _C _A))</code>, then click “Apply”.<ul>
+<li><img alt="img" src="./img/op-6.png" /></li>
+</ul>
+</li>
+<li>Click on the new goal on the left, and select the <code>tauto</code> tactic.</li>
+<li>Now the entire workspace is verified.<ul>
+<li><img alt="img" src="./img/op-7.png" /></li>
+</ul>
+</li>
+<li>Click on “open/close” under “node #0” to see the whole proof.</li>
+</ol>
+<h2>Foundation and Proof Structure</h2>
+<p>Currently, Saphyra uses Peano Arithmetic as the foundation, but it can be extended (in the future) to use alternate foundations.</p>
+<p>Proofs are structured as nested nodes. Each node represents a conditional truth, similar to a sequent; the following node, for instance, represents that “from the statements <em>(X → Y) and (Y → Z)</em> and <em>X</em>, we can derive <em>Z</em>”. Unlike a sequent, a node's outputs are conjunctive instead of disjunctive.</p>
+<p><img alt="node" src="./img/node.png" /></p>
+<p>The node contains subnodes (here hidden) that when combined, proves <em>Z</em> from the assumptions using built-in axioms. Each statement is suffixed with the justification: whether it is given, or derived from a rule.</p>
+<p>In a large proof, nodes represent structure; in the interface, nodes may be expanded or collapsed, so the user can focus on important parts of the proof.</p>
+<p>The entire workspace is also a node, usually named “#root”.</p>
+<p>Below is the internal representation of a successful proof.</p>
+<p><code style="white-space: pre-wrap; overflow: scroll; font-size: 14px;">
+[node #root [] [[forall [: _x:O [= _x:O [+ _x:O O]]]]] [join] [
+  [comment This is a proof of the theorem: forall x, x = x + 0.]
+  [node #2 [] [[forall [: _x:O [= _x:O [+ _x:O O]]]]] [forall-intro] [
+    [node #1 [] [[[: _x:O [= _x:O [+ _x:O O]]] _v0:O]] [join] [
+      [node #3 [] [[= [[: _x:O [= _x:O [+ _x:O O]]] _v0:O] [= _v0:O [+ _v0:O O]]]] [beta] []]
+      [node #4 [[= [[: _x:O [= _x:O [+ _x:O O]]] _v0:O] [= _v0:O [+ _v0:O O]]]] [[= [= _v0:O [+ _v0:O O]] [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]]] [=-sym] []]
+      [node #5 [[= [= _v0:O [+ _v0:O O]] [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]] [= _v0:O [+ _v0:O O]]] [[[: _x:O [= _x:O [+ _x:O O]]] _v0:O]] [equiv-elim] []]
+      [link #3 #4 [= [[: _x:O [= _x:O [+ _x:O O]]] _v0:O] [= _v0:O [+ _v0:O O]]]]
+      [link #4 #5 [= [= _v0:O [+ _v0:O O]] [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]]]
+      [link #5 ^c [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]]
+      [node #6 [[= [+ _v0:O O] _v0:O]] [[= _v0:O [+ _v0:O O]]] [=-sym] []]
+      [link #6 #5 [= _v0:O [+ _v0:O O]]]
+      [node #7 [] [[= [+ _v0:O O] _v0:O]] [+-O] []]
+      [link #7 #6 [= [+ _v0:O O] _v0:O]]
+    ]]
+  ]]
+  [link #2 ^c [forall [: _x:O [= _x:O [+ _x:O O]]]]]
+]]
+</code></p>
+<h2>Statement Syntax</h2>
+<p>Statements are entered in a Lisp-like format, with variables (propositions or objects) beginning with an underscore (<code>_</code>).</p>
+<table>
+  <tr>
+    <th scope="col">Statement</th>
+    <th scope="col">Code</th>
+  </tr>
+
+  <tr>
+    <td>
+      <em>A</em>
+    </td>
+    <td>
+      <code>_A</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      (<em>A</em> and <em>B</em>) → <em>C</em>
+    </td>
+    <td>
+      <code>(-> (and _A _B) _C)</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      not <em>A</em> (equivalently, <em>A</em> → false)
+    </td>
+    <td>
+      <code>(-> _A false)</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      ∀ <em>x</em> : Nat, <em>x</em> = <em>x</em>
+    </td>
+    <td>
+      <code>(forall (: _x:O (= _x:O _x:O)))</code>
+    </td>
+  </tr>
+</table>
+
+<h2>Codebase Introduction</h2>
+<p><code>js/</code> contains the code for the Web demo.</p>
+<ul>
+<li>The entry page is located at <code>start.html</code>, which provides the page layout and imports JS files.</li>
+<li><code>run.js</code> contains most functionality for the user-interface.</li>
+<li><code>axioms.js</code> contains axioms for first-order logic and Peano axioms that can be verified by simple pattern-matching. More complicated axioms, such as <code>impl-intro</code>, are given in <code>proof_module_2.js</code></li>
+<li><code>lisp.js</code> contains an implementation of a minimal Lisp language. It is intended to be used for writing tactics, but is currently inactive.</li>
+<li><code>toposort.js</code> implements topological sorting for dependencies of nodes, which denies circular reasoning.</li>
+<li><code>lambdas.js</code> provides utilities necessary for lambda expression reasoning.</li>
+<li><code>simple_typing.js</code> offers a simple type system.</li>
+<li><code>proof_module_2.js</code> is the main verifier. It takes a node (usually the entire proof tree), points out any incorrect nodes, and annotates the nodes for user-friendly displaying.</li>
+<li><code>nodeviz.js</code> visualizes various objects. For example, <code>dispStmt(obj)</code> displays a statement in a user-readable way.</li>
+<li><code>tree_derivs.js</code> contains some example derivations.</li>
+<li><code>tactics.js</code> provides tactics.<ul>
+<li>When the user selects a statement or a node, functions in <code>tactics.js</code> determine which rules or tactics are suitable for usage on that statement.</li>
+<li>When the user selects a tactic, functions in <code>tactics.js</code> apply that tactic on the proof tree, generating a new #root node.</li>
+<li>The <code>tauto</code> tactic breaks down the situation into 2^<em>n</em> cases, where <em>n</em> is the number of atomic statements in the goal, and uses suitable axioms to prove (evaluate) each case.</li>
+<li><img alt="tauto" src="./img/tauto.png" /></li>
+</ul>
+</li>
+</ul>
+<p><code>src/</code> contains a Python version, which is temporarily paused.</p>
+<h2>Future Plans</h2>
+<ul>
+<li>Complete Peano arithmetic and add tactics for natural numbers.</li>
+<li>Add unification for statements and types.</li>
+<li>Switch to ZFC / ETCS / Dependent Types as foundation, so that it may formalize most of modern mathematics.</li>
+<li>Improve automatic reasoning.</li>
+</ul></div>
+
+<hr />
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
