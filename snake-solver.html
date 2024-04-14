@@ -13,6 +13,12 @@
 
 <div class="article"><hgroup><time datetime="2023-11-19">2023-11-19</time><h1>A simple Snake solver in 60 lines</h1></hgroup><script src="js/snake.js" defer></script>
 <style>
+svg.snake {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 2 / 1;
+}
+
 .controls, .snake{
   text-align: center;
 }
@@ -28,21 +34,21 @@
 
 <p>Here is a simple <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Snake</a> game, where the snake is controlled by the computer. Click to add bits of food for the snake.</p>
 <p class="controls"><span id="ctrls1">JS and SVG support required.</span></p>
-<p class="snake"><svg id="svg1" width="600" height="300"></svg></p>
+<p class="snake"><svg class="snake" id="svg1"></svg></p>
 
 <h2>How does it work?</h2>
 <p>Thanks to two simple tricks.</p>
 <p>The first trick stemmed from a simple heuristic: a good snake, one who never traps itself, usually slithers in <strong>alternating directions</strong> on consecutive rows or columns. If it went left on the last row, it would go right on this row; and if it went up on the last column, it would go down on this column.</p>
 <p>We built our snake to <strong>strictly follow</strong> this rule: on even-numbered columns (starting from zero), it will always go down; whereas on odd-numbered columns, always goes up. A similar rule follows for rows. To the snake, the field looks like this, where each segment is walkable in only one direction:</p>
 <p class="controls"><span id="ctrls2">JS and SVG support required.</span></p>
-<p class="snake"><svg id="svg2" width="600" height="300"></svg></p>
+<p class="snake"><svg class="snake" id="svg2"></svg></p>
 
 <p>Note that each corner has exactly one incoming edge and one outgoing edge.</p>
 <p>On a field with even width and height, it is provable that such a snake never goes into a dead end, where all paths ahead are walls or its own body.</p>
 <p>The second trick is about knowing the future. When the snake is plotting its path, it carries out a <a href="https://en.wikipedia.org/wiki/Breadth-first_search">breadth-first search</a> on the directed graph shown above, stopping the search when food is found. When the search runs into a piece of the snake's body, the algorithm checks whether this piece would still be there when the head arrives — because sometimes this part of the snake moves away when that time comes.</p>
 <p>Here you can see the snake's search tree (select “All”) and the path it determined (select “Shortest”):</p>
 <p class="controls"><span id="ctrls3">JS and SVG support required.</span></p>
-<p class="snake"><svg id="svg3" width="600" height="300"></svg></p>
+<p class="snake"><svg class="snake" id="svg3"></svg></p>
 
 <p>Combining the two tricks, we have a snake who will devour any bits of food available, filling the field so that no more food can be dropped.</p>
 <p>The solver, 60 lines of JavaScript determining the snake's moves, is available at <a href="/js/snake.js">js/snake.js § lines 89–148</a>.</p></div>

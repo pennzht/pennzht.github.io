@@ -232,8 +232,10 @@ function paint2 (expr, evaL, evaR, fontName, upsideDown, isDark) {
     const data = finalBitmap.padAllSides ().toImageData (isDark, 1);
     canvas.width = data.width;
     canvas.height = data.height;
-    canvas.style.width = data.width * 5 + 'px';
-    canvas.style.height = data.height * 5 + 'px';
+    canvas.style.width = '100%';
+    canvas.style['max-width'] = data.width * 5 + 'px';
+    canvas.style['aspect-ratio'] = `${data.width} / ${data.height}`;
+    // canvas.style.height = data.height * 5 + 'px';
     c.clearRect (0, 0, canvas.width, canvas.height);
     c.putImageData (data, 0, 0);
 }
