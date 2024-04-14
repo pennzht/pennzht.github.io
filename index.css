@@ -23,7 +23,7 @@ body {
     background-color: var(--light-paper);
     color: var(--light-text);
     font-family: var(--prose);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 main {
