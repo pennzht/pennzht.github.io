@@ -122,3 +122,11 @@ p > time {
 .indexlink a {
     text-decoration: none;
 }
+
+details, blockquote {
+    border-left: 3px solid var(--light-magic);
+    padding: 10px 20px;
+    margin: 0;
+    background-color: #7777771f;
+}
+
