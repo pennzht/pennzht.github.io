@@ -81,7 +81,7 @@ function printMatches(articleList, path) {
 }
 
 const rawPath = window.location.pathname;
-const path = rawPath.replace(/^\*/,'').replace(/\.[^.]*/,'');
+const path = rawPath.replace(/^\/*/,'').replace(/\.[^.]*/,'');
 printMatches(articleList, path);
 
 
