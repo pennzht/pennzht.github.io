@@ -1,4 +1,93 @@
 <!DOCTYPE html>
-<html><head><title>Mage of the East</title><link rel="stylesheet" href="/index.css"></head><body><header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header><main>
-<div class="article"><div style="text-align: center;">404: What you seek cannot be found.</div></div>
-</main></body></html>
+<html>
+  <head>
+    <title>404 / Mage of the East</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/icon.svg">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article">
+    <div style="text-align: center;">404: What you seek cannot be found.</div>
+    <div id="suggestions"></div>
+</div>
+<script defer>
+articleList = new Map([["music-reason", "Music is a form of Reason"], ["owlboy-review", "Inevitable is Fate; unmissable is Destiny"], ["blue-easter", "Saphyra 2024 Spring Report"], ["leap-2024", "Leap Day 2024"], ["hacker-rites", "Rites of Passage"], ["webaudio-prelude", "Web Audio: First Impression"], ["ambi-formula", "Ambigram Expressions (13.4 MiB)"], ["auto-strife", "Game of Strife"], ["snake-solver", "A simple Snake solver in 60 lines"], ["grid-choice", "Why Chess is played in Squares but Go (Weiqi) on Intersections"], ["gray-house", "A Fever Dream"], ["blue-init", "Saphyra: the Beginning"]]);
+function calcDist(link, path) {
+    // Omissions of hyphens
+    if (link.split('-').join('') === path.split('-').join('')) return 0.25;
+
+    // Exact switches
+    const revLink = link.split('-').reverse().join('-');
+    if (revLink === path) return 0.50;
+
+    // Part of the original
+    if (link.split('-').includes(path)) return 3;
+
+    // Char distance
+    const threshold = 5, inf = 9999;
+    if (Math.abs(path.length - link.length) > threshold) return inf;
+    const mem = [];
+    for (let i = 0; i <= link.length; i++) {
+        mem.push([]);
+        for (let j = 0; j <= path.length; j++) {
+            let dist = inf;
+            if (j > 0) dist = Math.min (dist, mem[i][j-1] + 1);
+            if (i > 0) dist = Math.min (dist, mem[i-1][j] + 1);
+            if (i > 0 && j > 0) dist = Math.min (dist, mem[i-1][j-1] + (link[i-1] === path[j-1] ? 0 : 1));
+            if (i + j === 0) dist = 0;
+            mem[mem.length-1].push(dist);
+        }
+    }
+    let finalDist = mem[link.length][path.length];
+    return finalDist <= threshold ? finalDist : inf;
+}
+
+function printMatches(articleList, path) {
+    const matches = [];
+    for (const [link, title] of articleList.entries()) {
+        const dist = calcDist(link, path);
+        if (dist <= 10) {
+            matches.push ({dist, link, title});
+        }
+    }
+    matches.sort ((a, b) => a.dist - b.dist);
+
+    // Print matches to page.
+    const area = document.getElementById('suggestions');
+    area.innerHTML = '';
+
+    if (matches.length === 0) return;  // Only do this for found matches
+
+    area.appendChild (
+        document.createElement ('hr')
+    );
+    area.appendChild (
+        document.createTextNode ('You might be looking for:')
+    );
+    for (const m of matches) {
+        const title = klinkTitle = document.createTextNode (m.title);
+        const titleLink = document.createElement ('a');
+        titleLink.appendChild(title);
+        titleLink.setAttribute('href', m.link);
+        const div = document.createElement ('div');
+        div.appendChild(titleLink);
+        area.appendChild(div);
+    }
+}
+
+const rawPath = window.location.pathname;
+const path = rawPath.replace(/^\*/,'').replace(/\.[^.]*/,'');
+printMatches(articleList, path);
+
+
+</script>
+
+
+</main></body><!--
+
+--></html>
