@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Building Odd-ordered Magic Squares / Mage of the East</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/icon.svg">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2024-07-08">2024-07-08</time><h1>Building Odd-ordered Magic Squares</h1></hgroup><style>
+.ms-matrix {
+    text-align: center;
+}
+.widegrid td {
+    width: 4em;
+    font-size: 12px;
+}
+table {
+    border-collapse: collapse;
+    display: inline-block;
+}
+td {
+    border: 1px solid gray;
+    width: 2em;
+}
+.ms-no-coprime {
+    font-weight: bold;
+}
+</style>
+
+<p>In this article we will introduce a way to build <a href="https://en.wikipedia.org/wiki/Magic_square">magic squares</a> of odd order.</p>
+<h2>A simple building block</h2>
+<div style="float:right;"><input type="button" value="↓" id="ms-order-down" /><input type="button" value="↑" id="ms-order-up" /></div>
+<p>Consider the following <span class="ms-order">n</span>-by-<span class="ms-order">n</span> matrix.</p>
+<div id="ms-diags-1" class="ms-matrix"></div>
+
+<p>This matrix is created by filling a diagonal with 0, the diagonals next to it with ±1, and then ±2, until all <span class="ms-order">n</span> diagonals are filled. Here, each diagonal “wraps” around the border of the matrix and contains exactly <span class="ms-order">n</span> entries (henceforth also called <em>cells</em>).</p>
+<p>The sum of each row is 0, because it contains <span class="ms-order-range">{-(n-1)/2, ..., -1, 0, 1, ..., (n-1)/2}</span> exactly once. Similarly, the sum of each column is 0.</p>
+<p>The sum of each diagonal is also 0, due to the symmetry of the matrix as an odd function.</p>
+<script src="/js/magic_square.js" defer></script>
+
+<p>Now we rotate this matrix by 90°, and multiply it by <span class="ms-order">n</span>:</p>
+<div id="ms-diags-2" class="ms-matrix"></div>
+
+<p>Similarly, every row, column, and diagonal of this matrix has a sum of 0.</p>
+<p>We add the two matrices cell-by-cell, and then add each cell by the same number <span class="ms-median">(n² + 1) / 2</span>:</p>
+<div id="ms-diags-3" class="ms-matrix"></div>
+
+<p>Clearly, each row, column, and diagonal of this matrix sums up to the same number — because the two constituent matrices both satisfy this condition. Since it uses each whole number from 1 to <span class="ms-max">n²</span> exactly once, it is a magic square of order <span class="ms-order">n</span>.</p>
+<h2>Odd and even</h2>
+<p><strong>It is not obvious</strong> why this matrix should contain all integers from 1 to <span class="ms-max">n²</span> exactly once, without duplicate or missing numbers. We'll take a closer look.</p>
+<div id="ms-diags-4" class="ms-matrix"></div>
+
+<p>In the above matrix, we start at the red cell in the top row and go down along two diagonals.</p>
+<p>All cells on the orange diagonal (going lower-left) used the same component in the first constituent matrix, whereas all cells on the blue diagonal (going lower-right) did so in the second constituent. Notice how the distance between colored cells grows by 2 every time a we go down a row.</p>
+<p>Because <span class="ms-order">n</span> is odd, the two diagonals will “pass each other by” when they meet, instead of intersecting. As a result, no other cell in the matrix shares the same two constituents as the red cell.</p>
+<p>Due to symmetry, this works for all other cells.</p>
+<p>Since every integer from 1 to <span class="ms-max">n²</span> can be written uniquely as</p>
+<div style="text-align:center;">
+    <span class="ms-median">(n² + 1) / 2</span> + <span class="ms-order">n</span>i + j, where i, j are in <span class="ms-order-range">{-(n-1)/2, ..., -1, 0, 1, ..., (n-1)/2}</span>,
+</div>
+
+<p>we know that no two cells may contain the same constituents, and therefore must hold two different numbers.</p>
+<h2>Beyond simple diagonals</h2>
+<p>We can generalize this method to create more magic squares. First, let's consider the following coordinate system for the square grid:</p>
+<div id="ms-diags-5" class="ms-matrix"></div>
+
+<p>For a pair of coefficients a = <span class="ms-a">a</span>, b = <span class="ms-b">b</span>, we can write a linear function</p>
+<div style="float:right;">
+    <input type="button" value="a↓" id="ms-a-down" />
+    <input type="button" value="a↑" id="ms-a-up" />
+    <input type="button" value="b↓" id="ms-b-down" />
+    <input type="button" value="b↑" id="ms-b-up" />
+</div>
+<div style="text-align:center;">
+    V<sub>1</sub> = ai + bj = <span class="ms-abij">ai + bj</span>
+</div>
+<p>and plot it on the grid. Here we do all calculations modulo <span class="ms-order">n</span>, but ensure the remainder is as close to 0 as possible (that is, one of <span class="ms-order-range">{-(n-1)/2, ..., -1, 0, 1, ..., (n-1)/2}</span>).</p>
+<div id="ms-diags-6" class="ms-matrix"></div>
+
+<p>Due to symmetry, we know that each diagonal sums up to 0. When both a and b are coprime to <span class="ms-order">n</span>, each row and each column also contains each remainder exactly once, so that this square may be used as a constituent matrix of the desired magic square. <span id="no-coprime-ab" class="ms-no-coprime"></span></p>
+<p>We choose another linear function:</p>
+<div style="float:right;">
+    <input type="button" value="c↓" id="ms-c-down" />
+    <input type="button" value="c↑" id="ms-c-up" />
+    <input type="button" value="d↓" id="ms-d-down" />
+    <input type="button" value="d↑" id="ms-d-up" />
+</div>
+<div style="text-align:center;">
+    V<sub>2</sub> = ci + dj = <span class="ms-cdij">ci + dj</span>
+</div>
+
+<p>then multiply it by <span class="ms-order">n</span> (no modulo this time) to obtain a second constituent matrix:</p>
+<div id="ms-diags-7" class="ms-matrix"></div>
+
+<p><span id="no-coprime-cd" class="ms-no-coprime"></span></p>
+<p>Adding the two constituent matrices together, then adding <span class="ms-median">(n² + 1) / 2</span> so that the smallest number becomes 1, we get:</p>
+<div id="ms-diags-8" class="ms-matrix"></div>
+
+<p>If (ad - bc) is coprime with <span class="ms-order">n</span>, this matrix will contain all numbers from 1 to <span class="ms-max">n²</span> exactly once, and is therefore a magic square.</p>
+<p><span id="no-good-magic-square" class="ms-no-coprime"></span></p>
+<h2>Extreme use of symmetry</h2>
+<p>This method can be extended by choosing an <strong>odd bijective function</strong> from <span class="ms-order-range">{-(n-1)/2, ..., -1, 0, 1, ..., (n-1)/2}</span> to <span class="ms-order-range">{-(n-1)/2, ..., -1, 0, 1, ..., (n-1)/2}</span> and applying it on each constituent matrix. This will give rise to a whole family of magic squares, which we will also <strong>enumerate</strong>.
+I should pause this article here due to busyness — but I plan to come back and complete it on a future date!</p>
+<!-- ## Generating magic squares by hand -->
+<!-- knight's method --></div>
+
+<hr />
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
