@@ -51,6 +51,7 @@ function colorCellWith (cell, number /* -1 to +1 */, colors /* 3 colors */) {
     if (number >= 0) color = lerpColor (med, max, number);
     else color = lerpColor (med, min, -number);
     cell.style.backgroundColor = printColor (color);
+    cell.style.color = 'black';  // to ensure the number is visible.
 }
 
 function formatLinFn (a, b) {
