@@ -304,8 +304,8 @@ function genMeshpoints () {
         const side1 = new Eulerian (strideA, -strideB);
         const side2 = side1.mul (rotate60);
         // Find bounding box.
-        const minA = Math.min (0, side1.a, side2.a), minB = Math.min (0, side1.b, side2.b);
-        const maxA = Math.max (0, side1.a, side2.a), maxB = Math.max (0, side1.b, side2.b);
+        const minA = Q.min (Q.from(0), side1.a, side2.a), minB = Q.min (Q.from(0), side1.b, side2.b);
+        const maxA = Q.max (Q.from(0), side1.a, side2.a), maxB = Q.max (Q.from(0), side1.b, side2.b);
 
         console.log (side1, side2, minA, maxA, minB, maxB);
 

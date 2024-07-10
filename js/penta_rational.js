@@ -67,15 +67,48 @@ const rationalSign = (a) => {
 
 const rationalCompare = (a, b) => rationalSign (rationalSub (a, b));
 
-Rational = {
+const rationalFrom = (a) => {
+    if ((typeof a) === 'string') return a;
+    if ((typeof a) === 'number') return fraction (a, 1);
+};
+
+const rationalFloat = (a) => {
+    const [an, ad] = unpack (a);
+    return an/ad;
+}
+
+const rationalMin = (...args) => {
+    let ans = args[0];
+    for (let obj of args) {
+        const cmp = rationalCompare (obj, ans);
+        if (cmp < 0) ans = obj;
+    }
+    return ans;
+}
+
+const rationalMax = (...args) => {
+    let ans = args[0];
+    for (let obj of args) {
+        const cmp = rationalCompare (obj, ans);
+        if (cmp > 0) ans = obj;
+    }
+    return ans;
+}
+
+// Q for rational numbers.
+Q = {
     unpack,
     pack,
     numer,
     denom,
+    from: rationalFrom,
     add: rationalAdd,
     sub: rationalSub,
     mul: rationalMul,
     div: rationalDiv,
     sign: rationalSign,
     compare: rationalCompare,
+    float: rationalFloat,
+    min: rationalMin,
+    max: rationalMax,
 };
