@@ -151,6 +151,7 @@ function icosa () {
         G: [phi, 0, -1],
         H: [1, -phi, 0],
         I: [-1, -phi, 0],
+        J: [-phi, 0, -1],
         K: [0, 1, -phi],
         L: [0, -1, -phi],
     };
@@ -220,9 +221,21 @@ $('canvas').onmousemove = (e) => {
     c.stroke();
 
     // Draw points
-    for (const vert of vertices) {
-        drawPoint (vert, 2, 'black');
+    const v2 = icosa().vertices;
+    for (const label of 'ABCDEFGHIJKL') {
+        drawPoint (v2[label], 2, 'red');
     }
+
+    // Draw faces, in a certain way
+    const faces = icosa().faces;
+    for (const f of faces) {
+        const a = v2[f[0]], b = v2[f[1]], c = v2[f[2]];
+        drawLine (a, b, 100, 'gray');
+        drawLine (b, c, 100, 'gray');
+        drawLine (c, a, 100, 'gray');
+    }
+
+    return;
 
     // Draw lerpings
     for (const vert1 of vertices) {
