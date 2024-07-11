@@ -155,6 +155,7 @@ function icosa () {
         K: [0, 1, -phi],
         L: [0, -1, -phi],
     };
+    const verticesList = [...'ABCDEFGHIJKL'].map ((a) => vertices[a]);
     const faces = [
         'ABC', 'ACD', 'ADE', 'AEF', 'AFB',
         'CBH', 'DCG', 'EDK', 'FEJ', 'BFI',
@@ -177,7 +178,7 @@ function icosa () {
             }
         }
     }
-    return {vertices, faces, normal, neighbor};
+    return {vertices, verticesList, faces, normal, neighbor};
 }
 
 console.log ('icosa', icosa ());
@@ -185,14 +186,14 @@ console.log ('icosa', icosa ());
 //// Main
 
 window.onload = (e) => {
-    vertices = genVertices();
-    triangles = genTriangles();
+    icosahedron = icosa();
+    vertices = icosahedron.vertices;
+    verticesList = icosahedron.verticesList;
+    faces = icosahedron.faces;
+    normal = icosahedron.normal;
+    neighbor = icosahedron.neighbor;
     meshpoints = genMeshpoints();
-    console.log (
-        vertices.length,
-        triangles.length,
-        meshpoints.length,
-    );
+    console.log ('meshpoints:', meshpoints);
 }
 
 $('canvas').onmousemove = (e) => {
@@ -235,70 +236,10 @@ $('canvas').onmousemove = (e) => {
         drawLine (c, a, 100, 'gray');
     }
 
-    return;
-
-    // Draw lerpings
-    for (const vert1 of vertices) {
-        for (const vert2 of vertices) {
-            if (distance (vert1, vert2) <= 3) {
-                drawLine (vert1, vert2, 100, 'gray');
-            }
-        }
-    }
-
     // Draw meshpoints
     for (const mp of meshpoints) {
         drawPoint(mp, 1, 'gray');
     }
-
-    genVoronoi();
-}
-
-function genVertices () {
-    const ans = [];
-    for (let i = 0; i < 12; i++) {
-        const sign1 = [1, -1] [i & 1];
-        const sign2 = [1, -1] [(i >> 1) & 1];
-        const rotation = (i >> 2);
-        const [x, y, z] = [0, 1 * sign1, phi * sign2];
-        ans.push (
-            [[x, y, z], [y, z, x], [z, x, y]] [rotation]
-        );
-    }
-    return ans;
-}
-
-function genTriangles () {
-    const verts = genVertices();
-    
-    const edges = [];
-    const edgesSet = new Set();
-    const tris = [];
-
-    // First, range over edges.
-    for (let i = 0; i < 12; i++) for (let j = 0; j < 12; j++) {
-        if (i !== j && distance (verts[i], verts[j]) <= 3) {
-            edges.push ([i, j]);
-            edgesSet.add (`${i},${j}`);
-        }
-    }
-
-    // Then, range over triangles(!), in a given handedness.
-    for (let [i, j] of edges) for (let k = 0; k < 12; k++) {
-        // Only consider one order.
-        if (! (i <= j && i <= k)) continue;
-
-        if (edgesSet.has (`${i},${k}`) && edgesSet.has (`${j},${k}`) && righthanded (verts[i], verts[j], verts[k])) {
-            tris.push ([i, j, k]);
-        }
-    }
-
-    console.log ('edges', JSON.stringify (edges, null, 2));
-    console.log ('tris', JSON.stringify (tris, null, 2));
-
-    console.log (edges.length, 'edges', tris.length, 'tris');
-
-    return tris;
 }
 
 function genMeshpoints () {
@@ -307,7 +248,7 @@ function genMeshpoints () {
 
     const meshpoints = [];
 
-    for (const [i, j, k] of triangles) {
+    for (const [i, j, k] of faces) {
         const vi = verts[i], vj = verts[j], vk = verts[k];
 
         // Draws an equilateral triangle on an Eisenstein (Eulerian) grid.
@@ -323,7 +264,7 @@ function genMeshpoints () {
         console.log (side1, side2, minA, maxA, minB, maxB);
 
         const interiorPoints = [];
-        for (let a = minA; a <= maxA; a++) for (let b = minB; b <= maxB; b++) {
+        for (let a = Q.float(minA); a <= Q.float(maxA); a++) for (let b = Q.float(minB); b <= Q.float(maxB); b++) {
             const pt = [a, b, 1];
             // Test if inside.
             const inner =
@@ -337,7 +278,7 @@ function genMeshpoints () {
         let closeMatchCount = 0;
         for (const pt of interiorPoints) {
             const relPos = pt.div (side1);
-            const a = relPos.a, b = relPos.b;
+            const a = Q.float(relPos.a), b = Q.float(relPos.b);
             const meshpoint = add (
                 scale (vi, 1 - a),
                 add (
@@ -349,7 +290,7 @@ function genMeshpoints () {
             // Seeks close point
             let found = false;
             const epsilon = 1e-8;
-            for (const mp of vertices) {
+            for (const mp of verticesList) {
                 if (distance (mp, meshpoint) < epsilon) {
                     found = true; break;
                 }
@@ -372,58 +313,3 @@ function genMeshpoints () {
 
     return meshpoints;
 }
-
-function genVoronoi () {
-    const points = [...vertices, ...meshpoints];
-    
-    // For meshpoints, get 6 closest points.
-    for (let i = 0; i < points.length; i++) {
-        const pt = points[i];
-        const isVertex = i < vertices.length;
-        const neighborCount = isVertex ? 5 : 6;
-
-        const sortByDist = [...points];
-        sortByDist.sort ((a, b) => distance (a, pt) - distance (b, pt));
-        const nearest = sortByDist.slice(1, neighborCount+1);
-        const sorted = sortNeighbors (pt, nearest);
-        
-        const midpoints = [];
-        for (let i = 0; i < neighborCount; i++) {
-            midpoints.push (
-                scale (
-                    add (
-                        pt,
-                        add (sorted[i], sorted[(i+1)%neighborCount]),
-                    ),
-                    1/3,
-                ),
-            );
-        }
-
-        for (let i = 0; i < sorted.length; i++) {
-            // drawPoint (lerp (pt, n, 0.3), 1);
-            drawLine (
-                midpoints[i],
-                midpoints[(i+1) % neighborCount],
-            );
-        }
-    }
-}
-
-function sortNeighbors (axis, neighbors) {
-    const [a, b, c] = axis;
-    const w1 = [-b, a, 0];
-    const w2 = [-a*c, -b*c, a*a+b*b];
-    // Sort the remaining points by dot products;
-
-    const withAngles = neighbors.map ((nb) => {
-        const d1 = dot (w1, nb);
-        const d2 = dot (w2, nb);
-        const angle = Math.atan2 (d2, d1);
-        return {nb, angle};
-    });
-
-    withAngles.sort ((a, b) => a.angle - b.angle);
-    return withAngles.map ((a) => a.nb);
-}
-
