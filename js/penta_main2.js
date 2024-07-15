@@ -6,6 +6,7 @@ Next steps:
     pos is an Eisenstein integer, not divided by "scale" yet.
 3. Extensible coordinates
     if out of bounds, map to neighboring face
+4. Determine identity of points using coordinates (RATIONAL!), not epsilon.
 */
 
 const $ = (x) => document.getElementById(x);
@@ -238,8 +239,49 @@ $('canvas').onmousemove = (e) => {
 
     // Draw meshpoints
     for (const mp of meshpoints) {
-        drawPoint(mp, 1, 'gray');
+        drawPoint(mp.pt, 2, 'red');
+
+        // Draw neighbors
+        console.log (mp);
+        for (const neighbor of hexNeighbors (mp.def, new Eulerian (4, -2))) {
+            const pos = defToPos (neighbor, vertices);
+            console.log ('Position is', pos);
+            drawPoint(pos, 1, 'gray');
+        }
     }
+}
+
+// Draws an equilateral triangle on an Eisenstein (Eulerian) grid.
+function genTriangleMesh (strideA, strideB) {
+    const side1A = strideA, side1B = -strideB;
+    // (a - bw) (1 + 1w) = a + (a-b)w - bw^2 = (a+b) + aw
+    const side2A = strideA + strideB, side2B = strideA;
+    const side1 = [side1A, side1B, 1];
+    const side2 = [side2A, side2B, 1];
+
+    const minA = Math.min (0, side1A, side2A);
+    const maxA = Math.max (0, side1A, side2A);
+    const minB = Math.min (0, side1B, side2B);
+    const maxB = Math.max (0, side1B, side2B);
+
+    console.log ('trianglemesh args', side1A, side1B, side2A, side2B, minA, maxA, minB, maxB);
+
+    const interiorCoords = [];
+
+    // Create interior points.
+    for (let b = minB; b <= maxB; b++) for (let a = minA; a <= maxA; a++) {
+        const pt = [a, b, 1];
+        const inner =
+              det ([0, 0, 1], side1, pt) >= 0 &&
+              det ([0, 0, 1], pt, side2) >= 0 &&
+              det (pt, side1, side2) >= 0;
+        if (inner) {
+            interiorCoords.push ({a, b});
+            console.log ('interior', a, b);
+        }
+    }
+
+    return interiorCoords;
 }
 
 function genMeshpoints () {
@@ -248,35 +290,18 @@ function genMeshpoints () {
 
     const meshpoints = [];
 
+    const strideA = 4, strideB = 2;
+
+    const interiorPoints = genTriangleMesh(strideA, strideB);
+    const side1 = new Eulerian (strideA, - strideB);
+
     for (const [i, j, k] of faces) {
         const vi = verts[i], vj = verts[j], vk = verts[k];
 
-        // Draws an equilateral triangle on an Eisenstein (Eulerian) grid.
-
-        const strideA = 4, strideB = 2;
-
-        const side1 = new Eulerian (strideA, -strideB);
-        const side2 = side1.mul (rotate60);
-        // Find bounding box.
-        const minA = Q.min (Q.from(0), side1.a, side2.a), minB = Q.min (Q.from(0), side1.b, side2.b);
-        const maxA = Q.max (Q.from(0), side1.a, side2.a), maxB = Q.max (Q.from(0), side1.b, side2.b);
-
-        console.log (side1, side2, minA, maxA, minB, maxB);
-
-        const interiorPoints = [];
-        for (let a = Q.float(minA); a <= Q.float(maxA); a++) for (let b = Q.float(minB); b <= Q.float(maxB); b++) {
-            const pt = [a, b, 1];
-            // Test if inside.
-            const inner =
-                  det ([0, 0, 1], side1.coordProj(), pt) >= 0 &&
-                  det ([0, 0, 1], pt, side2.coordProj()) >= 0 &&
-                  det (pt, side1.coordProj(), side2.coordProj()) >= 0;
-            if (inner) interiorPoints.push (new Eulerian (a, b));
-        }
-
         // Find relative position of point in equilateral triangle.
         let closeMatchCount = 0;
-        for (const pt of interiorPoints) {
+        for (const ab of interiorPoints) {
+            const pt = new Eulerian (ab.a, ab.b);
             const relPos = pt.div (side1);
             const a = Q.float(relPos.a), b = Q.float(relPos.b);
             const meshpoint = add (
@@ -287,7 +312,11 @@ function genMeshpoints () {
                 ),
             );
 
+            const defString = `${i}${j}${k} ${ab.a},${ab.b} ${relPos.a},${relPos.b}`
+            const def = [`${i}${j}${k}`, relPos];
+
             // Seeks close point
+            // TODO - replace with EQUIVALENCE, exact distances
             let found = false;
             const epsilon = 1e-8;
             for (const mp of verticesList) {
@@ -298,13 +327,17 @@ function genMeshpoints () {
             if (found) continue;
 
             for (const mp of meshpoints) {
-                if (distance (mp, meshpoint) < epsilon) {
+                if (distance (mp.pt, meshpoint) < epsilon) {
                     found = true; break;
                 }
             }
             if (found) continue;
 
-            meshpoints.push (meshpoint);
+            meshpoints.push ({
+                pt: meshpoint,
+                defString,
+                def,
+            });
         }
 
         // Every meshpoint can be recorded as [faceId, u, v] where u, v are rationals,
@@ -312,4 +345,61 @@ function genMeshpoints () {
     }
 
     return meshpoints;
+}
+
+/*
+  An icosahedral coordinate:
+  {face: 'EDK', weights: [1/7, 2/7, 4/7]}
+  weights are in rationals.
+  This represents the point (1/7) E + (2/7) D + (4/7) K on face EDK.
+  By transposition (r), a coordinate has 2 other equivalents.
+  By mirroring, a coordinate has 3 other equivalents (and in case of negative coefficients, 1).
+
+  Example, since ABC's mirror face is BAF, the point aA + bB + cC (a + b + c = 1) will be mirrored as...
+  F = A + B - C
+  C = A + B - F
+  aA + bB + cC = aA + bB + c(A+B-F) = (a+c)A + (b+c)B - cF.
+  (a+c) + (b+c) + (-c) = a + b + c = 1. Verified.
+ */
+
+function coordinateXfer (coords) {
+    // Transfers an icosahedral coordinate to a neighboring face; this makes it possible to draw hexagons "across borders".
+}
+
+function hexNeighbors (def, side1) {
+    // `def` is in format [face, relPos: Eulerian]
+    // side1 is Eulerian (strideA, -strideB)
+
+    const [face, relPos] = def;
+    const ans = [];
+
+    for (const dir of [
+        new Eulerian (1, 0),
+        new Eulerian (1, 1),
+        new Eulerian (0, 1),
+        new Eulerian (-1, 0),
+        new Eulerian (-1, -1),
+        new Eulerian (0, -1),
+    ]) {
+        // Multiply by 3 to ensure visibility
+        const vector = dir.div (side1).mul (new Eulerian (Q.pack ([1,3]), Q.from(0)));
+        const newPos = relPos.add (vector);
+        ans.push ([face, newPos]);
+    }
+    return ans;
+}
+
+// Converts a definition ([face, coords]) to spatial coordinates.
+function defToPos (def, vertices) {
+    const [face, pos] = def;
+    const [i, j, k] = face;
+
+    const a = Q.float(pos.a), b = Q.float(pos.b);
+    return add (
+        scale (vertices[i], 1 - a),
+        add (
+            scale (vertices[j], a - b),
+            scale (vertices[k], b),
+        ),
+    );
 }
