@@ -239,14 +239,20 @@ $('canvas').onmousemove = (e) => {
 
     // Draw meshpoints
     for (const mp of meshpoints) {
-        drawPoint(mp.pt, 2, 'red');
+        drawPoint(mp.pt, 2, 'gray');
 
         // Draw neighbors
         console.log (mp);
-        for (const neighbor of hexNeighbors (mp.def, new Eulerian (4, -2))) {
-            const pos = defToPos (neighbor, vertices);
-            console.log ('Position is', pos);
-            drawPoint(pos, 1, 'gray');
+
+        const hexagon = hexNeighbors (mp.def, new Eulerian (4, -2));
+        const plotted = hexagon.map ((vertex) => defToPos (vertex, vertices));
+
+        for (let i = 0; i < 6; i++) {
+            drawLine (
+                plotted[i],
+                plotted[(i+1)%6],
+                10, 'gray',
+            );
         }
     }
 }
@@ -381,9 +387,11 @@ function hexNeighbors (def, side1) {
         new Eulerian (-1, -1),
         new Eulerian (0, -1),
     ]) {
-        // Multiply by 3 to ensure visibility
-        const vector = dir.div (side1).mul (new Eulerian (Q.pack ([1,3]), Q.from(0)));
-        const newPos = relPos.add (vector);
+        // Neighboring center.
+        const neighbor = dir.div (side1);
+        // Point on boundary.
+        const boundary = neighbor.div (new Eulerian (2, 1));
+        const newPos = relPos.add (boundary);
         ans.push ([face, newPos]);
     }
     return ans;
