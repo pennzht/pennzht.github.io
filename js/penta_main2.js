@@ -20,6 +20,8 @@ const rotation = [0, 0];
 
 const gran = 8;
 
+const strideA = 2, strideB = 1;
+
 //// Helper functions
 
 function norm (xyz) {
@@ -117,8 +119,9 @@ function drawPoint (xyz, size = 2, color='black') {
     c.fillRect (a-size, b-size, size * 2, size * 2);
 }
 
-function drawLine (p1, p2, gran=100, color='black') {
+function drawLine (p1, p2, gran=100, color='black', thickness=1) {
     c.strokeStyle = color;
+    c.lineWidth = thickness;
 
     const lerpings = [];
     for (let i = 0; i <= gran; i++) {
@@ -195,6 +198,9 @@ window.onload = (e) => {
     neighbor = icosahedron.neighbor;
     meshpoints = genMeshpoints();
     console.log ('meshpoints:', meshpoints);
+
+    console.log (normalizeDef (['KGL', new Eulerian ('2/3', '1/3')],
+                               vertices, neighbor));
 }
 
 $('canvas').onmousemove = (e) => {
@@ -244,14 +250,15 @@ $('canvas').onmousemove = (e) => {
         // Draw neighbors
         console.log (mp);
 
-        const hexagon = hexNeighbors (mp.def, new Eulerian (4, -2));
-        const plotted = hexagon.map ((vertex) => defToPos (vertex, vertices));
+        const hexagon = hexNeighbors (mp.def, new Eulerian (strideA, -strideB));
+        const normHexagon = hexagon.map ((def) => normalizeDef (def, vertices, neighbor));
+        const plotted = normHexagon.map ((def) => defToPos (def, vertices));
 
         for (let i = 0; i < 6; i++) {
             drawLine (
                 plotted[i],
                 plotted[(i+1)%6],
-                10, 'gray',
+                1, 'black', 0.25,
             );
         }
     }
@@ -295,8 +302,6 @@ function genMeshpoints () {
     const verts = vertices;
 
     const meshpoints = [];
-
-    const strideA = 4, strideB = 2;
 
     const interiorPoints = genTriangleMesh(strideA, strideB);
     const side1 = new Eulerian (strideA, - strideB);
@@ -411,3 +416,50 @@ function defToPos (def, vertices) {
         ),
     );
 }
+
+// Normalizing a set of coordinates.
+function normalizeDef (def, vertices, neighbor) {
+    const [face, pos] = def;
+    let [i, j, k] = face;
+    let weight1 = Q.sub(Q.from(1), pos.a);
+    let weight2 = Q.sub(pos.a, pos.b);
+    let weight3 = pos.b;
+
+    console.log (i+j+k, weight1, weight2, weight3);
+
+    const zero = Q.from(0);
+    
+    // If any is negative, rotate so that negative is in third place.
+    if (Q.compare (weight1, zero) < 0) {
+        [i, j, k] = [j, k, i];
+        [weight1, weight2, weight3] = [weight2, weight3, weight1];
+    } else if (Q.compare (weight2, zero) < 0) {
+        [i, j, k] = [k, i, j];
+        [weight1, weight2, weight3] = [weight3, weight1, weight2];
+    } else if (Q.compare (weight3, zero) < 0) {
+        // In place!
+    }
+
+    console.log (i+j+k, weight1, weight2, weight3);
+
+    // If first is zero, switch to other side.
+    if (Q.compare (weight3, zero) < 0) {
+        const [_1, _2, opposite] = neighbor[i+j+k];
+        weight1 = Q.add(weight1, weight3);
+        weight2 = Q.add(weight2, weight3);
+        weight3 = Q.mul(Q.from(-1), weight3);
+        [i, j, k] = [j, i, opposite];
+        [weight1, weight2] = [weight2, weight1];
+    }
+
+    console.log (i+j+k, weight1, weight2, weight3);
+
+    // Revert to ab coordinates
+    const w1 = weight1, w2 = weight2, w3 = weight3;
+    const b = w3, a = Q.add(w2, w3);
+
+    const ans = [i+j+k, new Eulerian(a, b)];
+    console.log ('Normalized:', def, ans);
+    return ans;
+}
+
