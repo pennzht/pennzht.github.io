@@ -1,12 +1,13 @@
 /* penta_main2.js: improved
 
 Next steps:
-1. Use better edge and face numbering. (letter + order)
-2. Encode each point as (ABC:Face, pos:complex)
+[done] 1. Use better edge and face numbering. (letter + order)
+[done] 2. Encode each point as (ABC:Face, pos:complex)
     pos is an Eisenstein integer, not divided by "scale" yet.
-3. Extensible coordinates
+[done] 3. Extensible coordinates
     if out of bounds, map to neighboring face
 4. Determine identity of points using coordinates (RATIONAL!), not epsilon.
+5. Cache everything
 */
 
 const $ = (x) => document.getElementById(x);
@@ -20,7 +21,7 @@ const rotation = [0, 0];
 
 const gran = 8;
 
-const strideA = 2, strideB = 1;
+const strideA = 3, strideB = 1;
 
 //// Helper functions
 
