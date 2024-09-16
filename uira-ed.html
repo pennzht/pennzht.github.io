@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Uira text editor / Mage of the East</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/icon.svg">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2024-09-16">2024-09-16</time><h1>The Uira text editor</h1></hgroup><p><a href="https://github.com/pennzht/uira"><strong>Uira</strong></a> is a text editor I made as a fun project. I use it as a <a href="/hacker-rites">challenge</a> to myself to make a simple, usable text editor within one month. It turned out quite suitable for my own writing needs.</p>
+<p>Uira is written in Python, currently unoptimized. Most features are implemented in the most naïve way possible. Each text buffer is represented as an array of characters, and any edit simply creates a new array in the history. Whenever a buffer changes, the editor simply re-typesets the entire passage, and displays it on the screen. Syntax highlighting is only regex. Autocomplete just gets all word-like strings in the file and sorts them by decreasing frequency. This is surely slow for text files longer than 300 lines, but it turns out to be perfectly fine for small files.</p>
+<p>Because I wrote Uira from scratch, I can add any feature to it in Python, without the need to look up the Emacs manual for Elisp or API usage. I haven't added any support for extensions (which may require a scripting language such as Lua), but now the editor is simply extensible by editing the code itself, taking advantage of the extensibility of the host language. I added two features, which I like a lot: The <strong>de Bruijn leap</strong> allows me to jump to any character on the screen, using three-letter coordinates based on <a href="https://en.wikipedia.org/wiki/De_Bruijn_sequence">de Bruijn sequences</a>, and <strong>templates with holes</strong> let me insert a predefined template with “holes” and jump to each hole to insert some text (such as the function name, argument list, and function body of a function definition).</p>
+<p>I don't expect Uira to be used by anyone other than me. But developing, using, and extending it has been very fun, and I might switch to it as my primary working editor instead of Emacs. I have already set my <code>git</code> editor to Uira, and now I write every commit message with it. I spent a few sleepless early mornings perfecting it, but the result is definitely worth the work. Due to my personal plans, I might not be able to work on it for the next few months, but I absolutely would like to continue improving it early 2025.</p></div>
+
+<hr />
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
