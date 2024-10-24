@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Track pacer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/index.css"> -->
+    <style>
+      * { margin: 0; padding: 0; border: 0; }
+      svg { display: block; }
+    </style>
+    <link rel="icon" href="/icon.svg">
+    <script defer>
+      setInterval(fn, 10);
+
+      window.onload = (e) => {
+        startTime = new Date() / 1000;
+        minutesInPeriod = parseFloat(window.location.hash.slice(1)) || 2.5;
+        period = (minutesInPeriod) * 60;  // Number of seconds
+        document.title = `${minutesInPeriod} min pacer`;
+
+        console.log(`Visit ${window.location.origin + window.location.pathname}#n for an n-minute pacer.`);
+      };
+
+      function fn () {
+        $ = (x) => document.getElementById(x);
+        $('svg').style.width = window.innerWidth + 'px';
+        $('svg').style.height = window.innerHeight + 'px';
+
+        $('svg').innerHTML = computeSvgDef();
+      }
+
+      function pathAt (p /*0...1*/) {
+        const dx = 50, dy = 100 / Math.PI;
+
+        const path = [];
+        path.push (`M ${0} ${dy}`);
+
+        if (p <= 1/8) {
+          path.push (`l ${dx * p / (1/8)} 0`);
+        } else {
+          path.push (`l ${dx} 0`);
+
+          if (p <= 3/8) {
+            const th = (p - 1/8) / (2/8) * Math.PI;
+            const thisDx = Math.sin(th), thisDy = Math.cos(th) - 1;
+            path.push (`a ${dy} ${dy} 0 0 0 ${thisDx * dy} ${thisDy * dy}`);
+          } else {
+            path.push (`a ${dy} ${dy} 0 0 0 0 ${-2*dy}`);
+
+            if (p <= 5/8) {
+              path.push (`l ${- dx * (p - 3/8) / (1/8)} 0`);
+            } else {
+              path.push (`l ${- 2 * dx} 0`);
+
+              if (p <= 7/8) {
+                const th = (p - 5/8) / (2/8) * Math.PI;
+                const thisDx = - Math.sin(th), thisDy = 1 - Math.cos(th);
+                path.push (`a ${dy} ${dy} 0 0 0 ${thisDx * dy} ${thisDy * dy}`);
+              } else {
+                path.push (`a ${dy} ${dy} 0 0 0 0 ${2*dy}`);
+
+                path.push (`l ${dx * (p - 7/8) / (1/8)} 0`);
+              }
+            }
+          }
+        }
+
+        return path.join(' ');
+      }
+
+      function computeSvgDef () {
+        // Speed
+        const laps = (new Date() / 1000 - startTime) / period;
+        const portion = laps % 1;
+        const wholeLaps = Math.floor(laps);
+
+        const dstr = pathAt(portion);
+        const bgElem = `<path stroke="#aaaaaa" fill="none" style="stroke-width:0.25;" d="${pathAt(1)}" />`;
+        const pathElem = `<path stroke="#ef3400" fill="none" style="stroke-width:3;" d="${dstr}" />`;
+        const lapText = `<text x=0 y=0 fill="#ef3400" style="text-anchor:middle; dominant-baseline: middle; font-family: sans-serif;">${wholeLaps}</text>`;
+        return bgElem + pathElem + lapText;
+      }
+    </script>
+  </head>
+<body>
+<main>
+  <svg id="svg" viewbox="-100 -50 200 100">
+  </svg>
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
