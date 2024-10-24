@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="/index.css"> -->
     <style>
-      * { margin: 0; padding: 0; border: 0; }
+      * { margin: 0; padding: 0; border: 0; background-color: black; }
       svg { display: block; }
     </style>
     <link rel="icon" href="/icon.svg">
@@ -75,10 +75,13 @@
         const portion = laps % 1;
         const wholeLaps = Math.floor(laps);
 
+        const orange = '#ff3b0e';
+        const blue = '#0092cb';
+
         const dstr = pathAt(portion);
-        const bgElem = `<path stroke="#aaaaaa" fill="none" style="stroke-width:0.25;" d="${pathAt(1)}" />`;
-        const pathElem = `<path stroke="#ef3400" fill="none" style="stroke-width:3;" d="${dstr}" />`;
-        const lapText = `<text x=0 y=0 fill="#ef3400" style="text-anchor:middle; dominant-baseline: middle; font-family: sans-serif;">${wholeLaps}</text>`;
+        const bgElem = `<path stroke="#777777" fill="none" style="stroke-width:0.25;" d="${pathAt(1)}" />`;
+        const pathElem = `<path stroke=${orange} fill="none" style="stroke-width:3;" d="${dstr}" />`;
+        const lapText = `<text x=0 y=0 fill=${blue} style="text-anchor:middle; dominant-baseline: middle; font-family: sans-serif; font-size: 2em;">${wholeLaps}</text>`;
         return bgElem + pathElem + lapText;
       }
     </script>
