@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saphyra 2024 Fall Report / Mage of the East</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/icon.svg">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2024-11-10">2024-11-10</time><h1>Saphyra 2024 Fall Report</h1></hgroup><p>This is a modified copy of the current <code>README.md</code> on Github.</p>
+<hr />
+
+<p>Beautiful mathematics at your fingertips.</p>
+<p><img alt="Screenshot" src="https://mage-of-the-east.com/saphyra/docs/img/proofnode-1.png" /></p>
+<h2>Overview</h2>
+<p><strong>Saphyra</strong> /səˈfaɪ.ɹə/ is a proof assistant under active development, a personal project created and maintained entirely by <a href="https://github.com/pennzht">@pennzht</a>.</p>
+<p>Saphyra aims to be simple and user-friendly. As of October 25, 2024, the proof repository has <strong>67</strong> tautologies and <strong>17</strong> natural number theorems verified. Tactics exist for each axiom, and also for rewriting equations based on proven statements.</p>
+<p>Visit <a href="https://mage-of-the-east.com/saphyra/js/start.html">Saphyra Web</a> to explore the current proof repository. Loading may take a few seconds.</p>
+<h2>Foundations</h2>
+<p>Currently Saphyra is built on a foundation of higher-order logic and Peano arithmetic, but it can be adjusted to use other rulesets, such as set theory. The axioms can be found in <a href="https://github.com/pennzht/saphyra/blob/main/js/axioms.js">axioms.js</a>.</p>
+<p>Each proof or collection of proofs is a <strong>node</strong>. A node may have inputs, outputs, and subnodes, representing a conditional truth that if all inputs hold, and if all subnodes are valid, then all outputs hold. In a sense, a node is similar to a sequent, and subnodes are other sequents which the parent node depends on. Unlike a sequent, a node's outputs are conjunctive instead of disjunctive.</p>
+<p>The verification process is defined in <a href="https://github.com/pennzht/saphyra/blob/main/js/proof_module_2.js">proof_module_2.js</a>.</p>
+<h2>Interface</h2>
+<p>Saphyra uses a Web interface. Using the buttons “Export entire state” and “Import entire state”, one can import a proof repository, work on it, and save it. Clicking on goals (statements not yet proven) will show usable tactics on the right, where the user can provide parameters and apply them.</p>
+<p>The menu “Step history” provides basic undo/redo support.</p>
+<p>Nodes may be folded to unclutter the view.</p>
+<h2>Roadmap</h2>
+<p>Prof. Freek Wiedijk maintains a list of <a href="https://www.cs.ru.nl/~freek/100/">100 theorems and their formalizations</a>. This is a good measure of both the maturity of a proof assistant and the maturity of formal methods as a field.</p>
+<p>By <strong>December 15, 2024</strong>, I aim to prove the following in Saphyra (2 of 100 theorems):</p>
+<ul>
+<li>Irrationality of √2</li>
+<li>Infinitude of primes</li>
+</ul>
+<p>By <strong>March 31, 2025</strong>, I aim to prove the following (15 of 100 theorems, accumulated):</p>
+<ul>
+<li>Divisibility by 3 rule</li>
+<li>The Fundamental Theorem of Arithmetic</li>
+<li>The Number of Subsets of a Set</li>
+<li>Wilson’s Theorem</li>
+<li>Euler’s Generalization of Fermat’s Little Theorem</li>
+<li>The Denumerability of the Rational Numbers</li>
+<li>The Binomial Theorem</li>
+<li>Konigsberg Bridges Problem</li>
+<li>Sum of a Geometric Series</li>
+<li>The Cauchy-Schwarz Inequality</li>
+<li>The Intermediate Value Theorem</li>
+<li>Principle of Inclusion/Exclusion</li>
+<li>Schroeder-Bernstein Theorem</li>
+</ul></div>
+
+<hr />
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
