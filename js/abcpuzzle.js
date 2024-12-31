@@ -174,6 +174,7 @@ function runSuccess() {
     if (!isSuccess) {
         isSuccess = true;
         setInterval (successTick, 1000);
+        $('remaining').style = 'display:none;';
     }
 }
 
