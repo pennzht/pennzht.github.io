@@ -50,15 +50,37 @@
   input::placeholder {
       color: blue;
   }
-  input.highlight::placeholder {
+  input.letter.highlight::placeholder {
       color: red;
       font-weight: 700;
   }
+
+  @media (prefers-color-scheme: dark) {
+      input.letter {
+          background-color: transparent;
+          color: white;
+      }
+      input::placeholder {
+          color: #47f6ff;
+      }
+      input.letter.highlight {
+          color: #ff6182;
+      }
+      input.letter.highlight::placeholder {
+          color: white;
+          font-weight: 700;
+      }
+      input.letter.same-letter {
+          background-color: #ffd88d33;
+      }
+  }
 </style>
 <script src="/js/abcpuzzle.js" defer></script>
+<div>
 <div id="lights-top" class="lights"></div>
 <div id="d"></div>
-<div id="lights-bottom" class="lights"></div></div>
+<div id="lights-bottom" class="lights"></div>
+</div></div>
 
 <hr />
 </main></body><!--
