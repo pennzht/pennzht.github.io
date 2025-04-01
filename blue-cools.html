@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saphyra 2025 Spring Report / Mage of the East</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/icon.svg">
+  </head>
+<body>
+<header class="logo"><div class="wsname"><a class="special" href="/">Mage of the East</a></div></header>
+<main>
+
+<div class="article"><hgroup><time datetime="2025-04-01">2025-04-01</time><h1>Saphyra 2025 Spring Report</h1></hgroup><p><img alt="Screenshot" src="https://mage-of-the-east.com/saphyra/docs/img/milestone-1.png" /></p>
+<p>On <strong>April 1, 2025</strong>, the following theorem was successfully formalized in Saphyra:</p>
+<p>✅ √2 is irrational</p>
+<p>Which brings the percentage of <a href="https://www.cs.ru.nl/~freek/100/">Prof. Wiedijk's 100 theorems</a> formalized in Saphyra to:</p>
+<div style="text-align:center; font-size: 50px; font-family:Linux Libertine, Palatino, Georgia, serif;">1%</div>
+
+<p>This is an important milestone for Saphyra: I consider it to be the first nontrivial theorem, one that requires significantly more organization and care than basic theorems (such as the associativity of <code>+</code>). I have bumped the version to <code>v0.3.0</code> after the addition of this proof.</p>
+<p>The theorem and its proof can be viewed on <a href="https://mage-of-the-east.com/saphyra/js/start.html">Saphyra Web</a> as the statement: <code>∀ n ↦ (r2denom:&lt;OP&gt; @ n) -&gt; false</code> which can be read as “no natural number can be a denominator of √2”.</p>
+<p>Please allow a few seconds for the proof repository to load. The theorem can be found at the bottom of the page (on the left side). Click on a “open/close” button to see details of a part of the proof.</p>
+<h1>What's new</h1>
+<p>From <code>v0.2.0</code> to <code>v0.3.0</code>, a lot of new features were added. All of them are crucial for a fully-featured proof assistant, and most of them are crucial for the proof of “√2 is irrational”.</p>
+<ul>
+<li>Definitions.<ul>
+<li>New definitions are made using defining statements, such as <code>∀ a ↦ ∀ b ↦ (a le:&lt;OOP&gt; b) = (∃ t ↦ a + t = b)</code>, which defines the <code>le:&lt;OOP&gt;</code> symbol, for the “less than or equal” relation (≤).</li>
+<li>Each definition node has an extra out-link, simply labelled like <code>def @ le:&lt;OOP&gt;</code>. This link is required when making a new definition dependent on the first one (such as defining <code>lt:&lt;OOP&gt;</code> using <code>le:&lt;OOP&gt;</code>), which prevents circular definitions.</li>
+</ul>
+</li>
+<li>Focusing.<ul>
+<li>Instead of showing the entire proof repository, the user can now focus on a single part of the proof by clicking on the fish-eye button — ◉ — which hides the rest of the repository.</li>
+</ul>
+</li>
+<li>Speedups.<ul>
+<li>Some caching is added to speed up the verification and saving processes.</li>
+</ul>
+</li>
+</ul>
+<p>All of this made the trip to the first nontrivial theorem much easier.</p>
+<h1>What's next</h1>
+<p>Although the first nontrivial theorem is now proven, a lot of things are still missing.</p>
+<ul>
+<li>A <strong>node editor</strong> can be tremendously beneficial: it would allow better organization, easier understanding, and freer development.</li>
+<li>The <strong>syntax</strong> can be updated to reduce visual noise.</li>
+<li>More automation, such as a <strong>tactic for polynomials</strong>, will reduce a lot of manual work.</li>
+<li><strong>Modular structure</strong>: allow proof modules to depend on one another.</li>
+<li><strong>More lemmas</strong>: such as those regarding divisibility and primes.</li>
+<li><strong>More theorems</strong>: aim to keep growing.</li>
+</ul>
+<p>This is the largest and most fun personal project I have made, and I'd love to see how far I can go.</p></div>
+
+<hr />
+</main></body><!--
+| From far, from eve and morning
+|     And yon twelve-winded sky,
+| The stuff of life to knit me
+|     Blew hither: here am I.
+|
+| Now — for a breath I tarry
+|     Nor yet disperse apart —
+| Take my hand quick and tell me,
+|     What have you in your heart.
+|
+| Speak now, and I will answer;
+|     How shall I help you, say;
+| Ere to the wind's twelve quarters
+|     I take my endless way.
+|
+| — A. E. Housman
+--></html>
