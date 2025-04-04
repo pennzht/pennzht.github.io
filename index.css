@@ -35,13 +35,13 @@ main {
 
 img {
     max-width: 100%;
-    aspect-ratio: 1 / 1;
+    width: auto;
+    height: auto;
 }
 
 canvas {
     width: 100%;
     max-width: 512px;
-    aspect-ratio: 1 / 1;
 }
 
 a:not(.special) {
