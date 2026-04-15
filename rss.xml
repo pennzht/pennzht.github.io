@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mage of the East</title>
+    <link>https://mage-of-the-east.com/</link>
+    <description>Mage&apos;s Website</description>
+    <language>en</language>
+    <generator>Mage&apos;s webgen</generator>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <ttl>360</ttl>
+    <atom:link href="https://mage-of-the-east.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blessed are the Misfits</title>
+      <link>https://mage-of-the-east.com/wrinkle-intime</link>
+      <guid>https://mage-of-the-east.com/wrinkle-intime</guid>
+      <description>&lt;h1&gt;Blessed are the Misfits&lt;/h1&gt;
+&lt;p&gt;A review of Madeleine L&apos;Engle&apos;s &lt;a href=&quot;https://en.wikipedia.org/wiki/A_Wrinkle_in_Time&quot;&gt;&lt;em&gt;A Wrinkle in Time&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Personal rating: &lt;strong&gt;5&lt;/strong&gt;/5&lt;/p&gt;
+&lt;p&gt;Recommended if you like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The Catcher in the Rye&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Neverending Story&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Little Prince&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Gray House&lt;/em&gt; by Mariam Petrosyan&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;His Dark Materials&lt;/em&gt; (with a caveat! See below.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you&apos;re a misfit, if you&apos;re different, if you stand out, if you are born with a strong stubbornness, with a brain that works differently, with a keen eye that most people lack, if you find it hard to control your anger, pain, joy, love, if you are constantly told that you&apos;re “too sensitive” or “too out-of-place” or “thinking too much” …&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;If you&apos;re like me&lt;/em&gt; …)&lt;/p&gt;
+&lt;p&gt;… &lt;strong&gt;You would love this book.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/wrinkle-intime&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 24 Mar 2026 00:38:12 +0100</pubDate>
+    </item>
+    <item>
+      <title>If Devotion had a Color</title>
+      <link>https://mage-of-the-east.com/cardinal-jay</link>
+      <guid>https://mage-of-the-east.com/cardinal-jay</guid>
+      <description>&lt;h1&gt;If Devotion had a Color&lt;/h1&gt;
+&lt;p&gt;A review of Amal El-Mohtar and Max Gladstone&apos;s &lt;a href=&quot;https://en.wikipedia.org/wiki/This_Is_How_You_Lose_the_Time_War&quot;&gt;&lt;em&gt;This Is How You Lose the Time War&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Personal rating: &lt;strong&gt;4&lt;/strong&gt;/5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;May contain some lightweight spoilers. Think before you continue reading.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/cardinal-jay&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 15 Mar 2026 22:03:28 +0100</pubDate>
+    </item>
+    <item>
+      <title>Aronson&apos;s sequence visualized</title>
+      <link>https://mage-of-the-east.com/fixpoint-t</link>
+      <guid>https://mage-of-the-east.com/fixpoint-t</guid>
+      <description>&lt;h1&gt;Aronson&apos;s sequence visualized&lt;/h1&gt;
+&lt;p&gt;A visualization of the Aronson&apos;s sequence: T is the first, fourth, eleventh, … letter in this sequence.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/fixpoint-t&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 24 Nov 2025 08:53:32 +0100</pubDate>
+    </item>
+    <item>
+      <title>Saphyra 2025 Spring Report</title>
+      <link>https://mage-of-the-east.com/blue-cools</link>
+      <guid>https://mage-of-the-east.com/blue-cools</guid>
+      <description>&lt;h1&gt;Saphyra 2025 Spring Report&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&quot;Screenshot&quot; src=&quot;https://mage-of-the-east.com/saphyra/docs/img/milestone-1.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;On &lt;strong&gt;April 1, 2025&lt;/strong&gt;, the following theorem was successfully formalized in Saphyra:&lt;/p&gt;
+&lt;p&gt;✅ √2 is irrational&lt;/p&gt;
+&lt;p&gt;Which brings the percentage of &lt;a href=&quot;https://www.cs.ru.nl/~freek/100/&quot;&gt;Prof. Wiedijk&apos;s 100 theorems&lt;/a&gt; formalized in Saphyra to:&lt;/p&gt;
+&lt;div style=&quot;text-align:center; font-size: 50px; font-family:Linux Libertine, Palatino, Georgia, serif;&quot;&gt;1%&lt;/div&gt;
+
+&lt;p&gt;This is an important milestone for Saphyra: I consider it to be the first nontrivial theorem, one that requires significantly more organization and care than basic theorems (such as the associativity of &lt;code&gt;+&lt;/code&gt;). I have bumped the version to &lt;code&gt;v0.3.0&lt;/code&gt; after the addition of this proof.&lt;/p&gt;
+&lt;p&gt;The theorem and its proof can be viewed on &lt;a href=&quot;https://mage-of-the-east.com/saphyra/js/start.html&quot;&gt;Saphyra Web&lt;/a&gt; as the statement: &lt;code&gt;∀ n ↦ (r2denom:&amp;lt;OP&amp;gt; @ n) -&amp;gt; false&lt;/code&gt; which can be read as “no natural number can be a denominator of √2”.&lt;/p&gt;
+&lt;p&gt;Please allow a few seconds for the proof repository to load. The theorem can be found at the bottom of the page (on the left side). Click on a “open/close” button to see details of a part of the proof.&lt;/p&gt;
+&lt;h1&gt;What&apos;s new&lt;/h1&gt;
+&lt;p&gt;From &lt;code&gt;v0.2.0&lt;/code&gt; to &lt;code&gt;v0.3.0&lt;/code&gt;, a lot of new features were added. All of them are crucial for a fully-featured proof assistant, and most of them are crucial for the proof of “√2 is irrational”.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Definitions.&lt;ul&gt;
+&lt;li&gt;New definitions are made using defining statements, such as &lt;code&gt;∀ a ↦ ∀ b ↦ (a le:&amp;lt;OOP&amp;gt; b) = (∃ t ↦ a + t = b)&lt;/code&gt;, which defines the &lt;code&gt;le:&amp;lt;OOP&amp;gt;&lt;/code&gt; symbol, for the “less than or equal” relation (≤).&lt;/li&gt;
+&lt;li&gt;Each definition node has an extra out-link, simply labelled like &lt;code&gt;def @ le:&amp;lt;OOP&amp;gt;&lt;/code&gt;. This link is required when making a new definition dependent on the first one (such as defining &lt;code&gt;lt:&amp;lt;OOP&amp;gt;&lt;/code&gt; using &lt;code&gt;le:&amp;lt;OOP&amp;gt;&lt;/code&gt;), which prevents circular definitions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Focusing.&lt;ul&gt;
+&lt;li&gt;Instead of showing the entire proof repository, the user can now focus on a single part of the proof by clicking on the fish-eye button — ◉ — which hides the rest of the repository.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Speedups.&lt;ul&gt;
+&lt;li&gt;Some caching is added to speed up the verification and saving processes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of this made the trip to the first nontrivial theorem much easier.&lt;/p&gt;
+&lt;h1&gt;What&apos;s next&lt;/h1&gt;
+&lt;p&gt;Although the first nontrivial theorem is now proven, a lot of things are still missing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;node editor&lt;/strong&gt; can be tremendously beneficial: it would allow better organization, easier understanding, and freer development.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;syntax&lt;/strong&gt; can be updated to reduce visual noise.&lt;/li&gt;
+&lt;li&gt;More automation, such as a &lt;strong&gt;tactic for polynomials&lt;/strong&gt;, will reduce a lot of manual work.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modular structure&lt;/strong&gt;: allow proof modules to depend on one another.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More lemmas&lt;/strong&gt;: such as those regarding divisibility and primes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More theorems&lt;/strong&gt;: aim to keep growing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the largest and most fun personal project I have made, and I&apos;d love to see how far I can go.&lt;/p&gt;</description>
+      <pubDate>Tue, 1 Apr 2025 02:07:19 +0200</pubDate>
+    </item>
+    <item>
+      <title>Final Post of 2024</title>
+      <link>https://mage-of-the-east.com/preview-2025</link>
+      <guid>https://mage-of-the-east.com/preview-2025</guid>
+      <description>&lt;h1&gt;Final Post of 2024&lt;/h1&gt;
+&lt;p&gt;A tiny puzzle for the end of 2024, for all readers of my website! Best viewed on desktop.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/preview-2025&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 31 Dec 2024 23:59:04 +0100</pubDate>
+    </item>
+    <item>
+      <title>Saphyra 2024 Fall Report</title>
+      <link>https://mage-of-the-east.com/blue-october</link>
+      <guid>https://mage-of-the-east.com/blue-october</guid>
+      <description>&lt;h1&gt;Saphyra 2024 Fall Report&lt;/h1&gt;
+&lt;p&gt;This is a modified copy of the current &lt;code&gt;README.md&lt;/code&gt; on Github.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Beautiful mathematics at your fingertips.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Screenshot&quot; src=&quot;https://mage-of-the-east.com/saphyra/docs/img/proofnode-1.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Saphyra&lt;/strong&gt; /səˈfaɪ.ɹə/ is a proof assistant under active development, a personal project created and maintained entirely by &lt;a href=&quot;https://github.com/pennzht&quot;&gt;@pennzht&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Saphyra aims to be simple and user-friendly. As of October 25, 2024, the proof repository has &lt;strong&gt;67&lt;/strong&gt; tautologies and &lt;strong&gt;17&lt;/strong&gt; natural number theorems verified. Tactics exist for each axiom, and also for rewriting equations based on proven statements.&lt;/p&gt;
+&lt;p&gt;Visit &lt;a href=&quot;https://mage-of-the-east.com/saphyra/js/start.html&quot;&gt;Saphyra Web&lt;/a&gt; to explore the current proof repository. Loading may take a few seconds.&lt;/p&gt;
+&lt;h2&gt;Foundations&lt;/h2&gt;
+&lt;p&gt;Currently Saphyra is built on a foundation of higher-order logic and Peano arithmetic, but it can be adjusted to use other rulesets, such as set theory. The axioms can be found in &lt;a href=&quot;https://github.com/pennzht/saphyra/blob/main/js/axioms.js&quot;&gt;axioms.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Each proof or collection of proofs is a &lt;strong&gt;node&lt;/strong&gt;. A node may have inputs, outputs, and subnodes, representing a conditional truth that if all inputs hold, and if all subnodes are valid, then all outputs hold. In a sense, a node is similar to a sequent, and subnodes are other sequents which the parent node depends on. Unlike a sequent, a node&apos;s outputs are conjunctive instead of disjunctive.&lt;/p&gt;
+&lt;p&gt;The verification process is defined in &lt;a href=&quot;https://github.com/pennzht/saphyra/blob/main/js/proof_module_2.js&quot;&gt;proof_module_2.js&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Interface&lt;/h2&gt;
+&lt;p&gt;Saphyra uses a Web interface. Using the buttons “Export entire state” and “Import entire state”, one can import a proof repository, work on it, and save it. Clicking on goals (statements not yet proven) will show usable tactics on the right, where the user can provide parameters and apply them.&lt;/p&gt;
+&lt;p&gt;The menu “Step history” provides basic undo/redo support.&lt;/p&gt;
+&lt;p&gt;Nodes may be folded to unclutter the view.&lt;/p&gt;
+&lt;h2&gt;Roadmap&lt;/h2&gt;
+&lt;p&gt;Prof. Freek Wiedijk maintains a list of &lt;a href=&quot;https://www.cs.ru.nl/~freek/100/&quot;&gt;100 theorems and their formalizations&lt;/a&gt;. This is a good measure of both the maturity of a proof assistant and the maturity of formal methods as a field.&lt;/p&gt;
+&lt;p&gt;By &lt;strong&gt;December 15, 2024&lt;/strong&gt;, I aim to prove the following in Saphyra (2 of 100 theorems):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Irrationality of √2&lt;/li&gt;
+&lt;li&gt;Infinitude of primes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By &lt;strong&gt;March 31, 2025&lt;/strong&gt;, I aim to prove the following (15 of 100 theorems, accumulated):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Divisibility by 3 rule&lt;/li&gt;
+&lt;li&gt;The Fundamental Theorem of Arithmetic&lt;/li&gt;
+&lt;li&gt;The Number of Subsets of a Set&lt;/li&gt;
+&lt;li&gt;Wilson’s Theorem&lt;/li&gt;
+&lt;li&gt;Euler’s Generalization of Fermat’s Little Theorem&lt;/li&gt;
+&lt;li&gt;The Denumerability of the Rational Numbers&lt;/li&gt;
+&lt;li&gt;The Binomial Theorem&lt;/li&gt;
+&lt;li&gt;Konigsberg Bridges Problem&lt;/li&gt;
+&lt;li&gt;Sum of a Geometric Series&lt;/li&gt;
+&lt;li&gt;The Cauchy-Schwarz Inequality&lt;/li&gt;
+&lt;li&gt;The Intermediate Value Theorem&lt;/li&gt;
+&lt;li&gt;Principle of Inclusion/Exclusion&lt;/li&gt;
+&lt;li&gt;Schroeder-Bernstein Theorem&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <pubDate>Sun, 10 Nov 2024 07:29:13 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Uira text editor</title>
+      <link>https://mage-of-the-east.com/uira-ed</link>
+      <guid>https://mage-of-the-east.com/uira-ed</guid>
+      <description>&lt;h1&gt;The Uira text editor&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/pennzht/uira&quot;&gt;&lt;strong&gt;Uira&lt;/strong&gt;&lt;/a&gt; is a text editor I made as a fun project. I use it as a &lt;a href=&quot;/hacker-rites&quot;&gt;challenge&lt;/a&gt; to myself to make a simple, usable text editor within one month. It turned out quite suitable for my own writing needs.&lt;/p&gt;
+&lt;p&gt;Uira is written in Python, currently unoptimized. Most features are implemented in the most naïve way possible. Each text buffer is represented as an array of characters, and any edit simply creates a new array in the history. Whenever a buffer changes, the editor simply re-typesets the entire passage, and displays it on the screen. Syntax highlighting is only regex. Autocomplete just gets all word-like strings in the file and sorts them by decreasing frequency. This is surely slow for text files longer than 300 lines, but it turns out to be perfectly fine for small files.&lt;/p&gt;
+&lt;p&gt;Because I wrote Uira from scratch, I can add any feature to it in Python, without the need to look up the Emacs manual for Elisp or API usage. I haven&apos;t added any support for extensions (which may require a scripting language such as Lua), but now the editor is simply extensible by editing the code itself, taking advantage of the extensibility of the host language. I added two features, which I like a lot: The &lt;strong&gt;de Bruijn leap&lt;/strong&gt; allows me to jump to any character on the screen, using three-letter coordinates based on &lt;a href=&quot;https://en.wikipedia.org/wiki/De_Bruijn_sequence&quot;&gt;de Bruijn sequences&lt;/a&gt;, and &lt;strong&gt;templates with holes&lt;/strong&gt; let me insert a predefined template with “holes” and jump to each hole to insert some text (such as the function name, argument list, and function body of a function definition).&lt;/p&gt;
+&lt;p&gt;I don&apos;t expect Uira to be used by anyone other than me. But developing, using, and extending it has been very fun, and I might switch to it as my primary working editor instead of Emacs. I have already set my &lt;code&gt;git&lt;/code&gt; editor to Uira, and now I write every commit message with it. I spent a few sleepless early mornings perfecting it, but the result is definitely worth the work. Due to my personal plans, I might not be able to work on it for the next few months, but I absolutely would like to continue improving it early 2025.&lt;/p&gt;</description>
+      <pubDate>Mon, 16 Sep 2024 19:39:13 +0200</pubDate>
+    </item>
+    <item>
+      <title>Joy in a Closed Box</title>
+      <link>https://mage-of-the-east.com/closed-box</link>
+      <guid>https://mage-of-the-east.com/closed-box</guid>
+      <description>&lt;h1&gt;Joy in a Closed Box&lt;/h1&gt;
+&lt;p&gt;A review of Kenji Takemoto&apos;s &lt;em&gt;Loss of Joy in a Closed Box&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/closed-box&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sat, 10 Aug 2024 19:09:33 +0200</pubDate>
+    </item>
+    <item>
+      <title>Building Odd-ordered Magic Squares</title>
+      <link>https://mage-of-the-east.com/magic-square</link>
+      <guid>https://mage-of-the-east.com/magic-square</guid>
+      <description>&lt;h1&gt;Building Odd-ordered Magic Squares&lt;/h1&gt;
+&lt;p&gt;Build magic squares of odd order.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/magic-square&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 8 Jul 2024 21:40:35 +0200</pubDate>
+    </item>
+    <item>
+      <title>In the Cold of Summer</title>
+      <link>https://mage-of-the-east.com/summer-cold</link>
+      <guid>https://mage-of-the-east.com/summer-cold</guid>
+      <description>&lt;h1&gt;In the Cold of Summer&lt;/h1&gt;
+&lt;p&gt;After the downpour — an incessant drummer,&lt;br /&gt;
+Flashing sky-fires and roaring rumblers —&lt;br /&gt;
+The gentle chill of Zephyrus again rises,&lt;br /&gt;
+And from the dark forest the genius reprises&lt;br /&gt;
+Winged songs of old, in the cold of summer.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;An image of trees against the sky.&quot; src=&quot;img/summer-cold.png&quot; /&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 23 Jun 2024 08:45:07 +0200</pubDate>
+    </item>
+    <item>
+      <title>Music is a form of Reason</title>
+      <link>https://mage-of-the-east.com/music-reason</link>
+      <guid>https://mage-of-the-east.com/music-reason</guid>
+      <description>&lt;h1&gt;Music is a form of Reason&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: I have not received any rigorous training in Arts (except some musical). Read this article as personal rambling instead of professional opinion.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Music is a form of Reason.&lt;/p&gt;
+&lt;p&gt;From the mathematical subdivision of bars and beats, to the frequency relations between harmonious note combinations, Music is filled with structure and similarity. The word “reason” comes from Latin “ratiō”, a callout and reminder to the olden days, when Pythagoreanists explored music using numbers.&lt;/p&gt;
+&lt;p&gt;Unlike Painting, which heavily owes its origin and inspiration to imitation of Nature, Music feels more like an abstract human construction. It&apos;s true that Music sometimes borrows from Nature (such as instruments mimicking the sound of birds or rivers), but musical beauty usually lies in repetition and coherence, the same reason why meter, rhyme, and alliteration are valued in poetry.&lt;/p&gt;
+&lt;p&gt;In this spirit, Music resembles Mathematics and Logic, and some Architecture: it is a kind of formalism, a celebration of Pattern itself, a masterpiece of the human mind.&lt;/p&gt;
+&lt;p&gt;Therefore, I consider Music a form of Reason.&lt;/p&gt;</description>
+      <pubDate>Tue, 18 Jun 2024 09:12:37 +0200</pubDate>
+    </item>
+    <item>
+      <title>Inevitable is Fate; unmissable is Destiny</title>
+      <link>https://mage-of-the-east.com/owlboy-review</link>
+      <guid>https://mage-of-the-east.com/owlboy-review</guid>
+      <description>&lt;h1&gt;Inevitable is Fate; unmissable is Destiny&lt;/h1&gt;
+&lt;p&gt;A review of D-Pad Studio&apos;s video game &lt;a href=&quot;https://en.wikipedia.org/wiki/Owlboy&quot;&gt;&lt;em&gt;Owlboy&lt;/em&gt;&lt;/a&gt;. Includes a few screenshots.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Personal rating: &lt;strong&gt;5&lt;/strong&gt;/5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Do you remember the feeling of emptiness after reaching the end of a book, a film, a game? A longing for a world behind the screen, between the pages? Some call it “post-fiction depression”; others call it “electronic heartbreak”. Those who experience this longing are doomed to return and relive the story, sometimes hoping to lose all memory of it in order to see everything as if it&apos;s the first time.&lt;/p&gt;
+&lt;p&gt;This is how I feel after playing &lt;em&gt;Owlboy&lt;/em&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/owlboy-review&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 18 Jun 2024 09:12:37 +0200</pubDate>
+    </item>
+    <item>
+      <title>Saphyra 2024 Spring Report</title>
+      <link>https://mage-of-the-east.com/blue-easter</link>
+      <guid>https://mage-of-the-east.com/blue-easter</guid>
+      <description>&lt;h1&gt;Saphyra 2024 Spring Report&lt;/h1&gt;
+&lt;p&gt;Also published &lt;a href=&quot;https://github.com/pennzht/saphyra/blob/main/docs/2024-spring.md&quot;&gt;on GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pennzht/saphyra&quot;&gt;&lt;strong&gt;Saphyra&lt;/strong&gt;&lt;/a&gt; is a proof assistant under development, with simplicity and user-friendliness as goals. As of April 1, 2024, it is able to verify some simple statements about natural numbers and automatically prove (propositional) tautologies with ≤ 6 atomic statements (the limit is artificially imposed to avoid long running loops). A Web user interface is also added, so you can prove propositions by clicking on suitable tactics.&lt;/p&gt;
+&lt;p&gt;This software is in its early stages and incomplete, but I have plans to continue developing it and improving it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mage-of-the-east.com/saphyra/js/start.html&quot;&gt;Click here to try the Web demo&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Using the Web demo&lt;/h2&gt;
+&lt;p&gt;Prove a given goal:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on the “incomplete” tab to enter this workspace.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-1.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The red block on the left is a goal not yet proven; click on it to see a list of tactics.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-2.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Apply the tactic &lt;code&gt;impl-intro&lt;/code&gt; to create a subgoal: proving &lt;em&gt;(B → (A and A) and B)&lt;/em&gt; using &lt;em&gt;A&lt;/em&gt;.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-3.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;impl-intro&lt;/code&gt; on the new goal again.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;and-intro&lt;/code&gt; twice to destruct the goal into &lt;em&gt;A&lt;/em&gt;, &lt;em&gt;A&lt;/em&gt;, and &lt;em&gt;B&lt;/em&gt;.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-4.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;A&lt;/em&gt; is an exact match with the assumption &lt;em&gt;A&lt;/em&gt;; use &lt;code&gt;exact-match&lt;/code&gt; to resolve.&lt;/li&gt;
+&lt;li&gt;Similar for &lt;em&gt;B&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Now the entire workspace is verified.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Prove a custom goal:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on the “empty” tab.&lt;/li&gt;
+&lt;li&gt;Click on “node #root” on the top-left.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-5.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;On the right, enter a new goal, such as &lt;code&gt;(-&amp;gt; (and _A _B) (-&amp;gt; _C _A))&lt;/code&gt;, then click “Apply”.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-6.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click on the new goal on the left, and select the &lt;code&gt;tauto&lt;/code&gt; tactic.&lt;/li&gt;
+&lt;li&gt;Now the entire workspace is verified.&lt;ul&gt;
+&lt;li&gt;&lt;img alt=&quot;img&quot; src=&quot;./img/op-7.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click on “open/close” under “node #0” to see the whole proof.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Foundation and Proof Structure&lt;/h2&gt;
+&lt;p&gt;Currently, Saphyra uses Peano Arithmetic as the foundation, but it can be extended (in the future) to use alternate foundations.&lt;/p&gt;
+&lt;p&gt;Proofs are structured as nested nodes. Each node represents a conditional truth, similar to a sequent; the following node, for instance, represents that “from the statements &lt;em&gt;(X → Y) and (Y → Z)&lt;/em&gt; and &lt;em&gt;X&lt;/em&gt;, we can derive &lt;em&gt;Z&lt;/em&gt;”. Unlike a sequent, a node&apos;s outputs are conjunctive instead of disjunctive.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;node&quot; src=&quot;./img/node.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The node contains subnodes (here hidden) that when combined, proves &lt;em&gt;Z&lt;/em&gt; from the assumptions using built-in axioms. Each statement is suffixed with the justification: whether it is given, or derived from a rule.&lt;/p&gt;
+&lt;p&gt;In a large proof, nodes represent structure; in the interface, nodes may be expanded or collapsed, so the user can focus on important parts of the proof.&lt;/p&gt;
+&lt;p&gt;The entire workspace is also a node, usually named “#root”.&lt;/p&gt;
+&lt;p&gt;Below is the internal representation of a successful proof.&lt;/p&gt;
+&lt;p&gt;&lt;code style=&quot;white-space: pre-wrap; overflow: scroll; font-size: 14px;&quot;&gt;
+[node #root [] [[forall [: _x:O [= _x:O [+ _x:O O]]]]] [join] [
+  [comment This is a proof of the theorem: forall x, x = x + 0.]
+  [node #2 [] [[forall [: _x:O [= _x:O [+ _x:O O]]]]] [forall-intro] [
+    [node #1 [] [[[: _x:O [= _x:O [+ _x:O O]]] _v0:O]] [join] [
+      [node #3 [] [[= [[: _x:O [= _x:O [+ _x:O O]]] _v0:O] [= _v0:O [+ _v0:O O]]]] [beta] []]
+      [node #4 [[= [[: _x:O [= _x:O [+ _x:O O]]] _v0:O] [= _v0:O [+ _v0:O O]]]] [[= [= _v0:O [+ _v0:O O]] [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]]] [=-sym] []]
+      [node #5 [[= [= _v0:O [+ _v0:O O]] [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]] [= _v0:O [+ _v0:O O]]] [[[: _x:O [= _x:O [+ _x:O O]]] _v0:O]] [equiv-elim] []]
+      [link #3 #4 [= [[: _x:O [= _x:O [+ _x:O O]]] _v0:O] [= _v0:O [+ _v0:O O]]]]
+      [link #4 #5 [= [= _v0:O [+ _v0:O O]] [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]]]
+      [link #5 ^c [[: _x:O [= _x:O [+ _x:O O]]] _v0:O]]
+      [node #6 [[= [+ _v0:O O] _v0:O]] [[= _v0:O [+ _v0:O O]]] [=-sym] []]
+      [link #6 #5 [= _v0:O [+ _v0:O O]]]
+      [node #7 [] [[= [+ _v0:O O] _v0:O]] [+-O] []]
+      [link #7 #6 [= [+ _v0:O O] _v0:O]]
+    ]]
+  ]]
+  [link #2 ^c [forall [: _x:O [= _x:O [+ _x:O O]]]]]
+]]
+&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Statement Syntax&lt;/h2&gt;
+&lt;p&gt;Statements are entered in a Lisp-like format, with variables (propositions or objects) beginning with an underscore (&lt;code&gt;_&lt;/code&gt;).&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;col&quot;&gt;Statement&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Code&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;em&gt;A&lt;/em&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;code&gt;_A&lt;/code&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      (&lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt;) → &lt;em&gt;C&lt;/em&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;code&gt;(-&gt; (and _A _B) _C)&lt;/code&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      not &lt;em&gt;A&lt;/em&gt; (equivalently, &lt;em&gt;A&lt;/em&gt; → false)
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;code&gt;(-&gt; _A false)&lt;/code&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      ∀ &lt;em&gt;x&lt;/em&gt; : Nat, &lt;em&gt;x&lt;/em&gt; = &lt;em&gt;x&lt;/em&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;code&gt;(forall (: _x:O (= _x:O _x:O)))&lt;/code&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;Codebase Introduction&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;js/&lt;/code&gt; contains the code for the Web demo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The entry page is located at &lt;code&gt;start.html&lt;/code&gt;, which provides the page layout and imports JS files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run.js&lt;/code&gt; contains most functionality for the user-interface.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;axioms.js&lt;/code&gt; contains axioms for first-order logic and Peano axioms that can be verified by simple pattern-matching. More complicated axioms, such as &lt;code&gt;impl-intro&lt;/code&gt;, are given in &lt;code&gt;proof_module_2.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lisp.js&lt;/code&gt; contains an implementation of a minimal Lisp language. It is intended to be used for writing tactics, but is currently inactive.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;toposort.js&lt;/code&gt; implements topological sorting for dependencies of nodes, which denies circular reasoning.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lambdas.js&lt;/code&gt; provides utilities necessary for lambda expression reasoning.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;simple_typing.js&lt;/code&gt; offers a simple type system.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;proof_module_2.js&lt;/code&gt; is the main verifier. It takes a node (usually the entire proof tree), points out any incorrect nodes, and annotates the nodes for user-friendly displaying.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nodeviz.js&lt;/code&gt; visualizes various objects. For example, &lt;code&gt;dispStmt(obj)&lt;/code&gt; displays a statement in a user-readable way.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tree_derivs.js&lt;/code&gt; contains some example derivations.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tactics.js&lt;/code&gt; provides tactics.&lt;ul&gt;
+&lt;li&gt;When the user selects a statement or a node, functions in &lt;code&gt;tactics.js&lt;/code&gt; determine which rules or tactics are suitable for usage on that statement.&lt;/li&gt;
+&lt;li&gt;When the user selects a tactic, functions in &lt;code&gt;tactics.js&lt;/code&gt; apply that tactic on the proof tree, generating a new #root node.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;tauto&lt;/code&gt; tactic breaks down the situation into 2^&lt;em&gt;n&lt;/em&gt; cases, where &lt;em&gt;n&lt;/em&gt; is the number of atomic statements in the goal, and uses suitable axioms to prove (evaluate) each case.&lt;/li&gt;
+&lt;li&gt;&lt;img alt=&quot;tauto&quot; src=&quot;./img/tauto.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;src/&lt;/code&gt; contains a Python version, which is temporarily paused.&lt;/p&gt;
+&lt;h2&gt;Future Plans&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete Peano arithmetic and add tactics for natural numbers.&lt;/li&gt;
+&lt;li&gt;Add unification for statements and types.&lt;/li&gt;
+&lt;li&gt;Switch to ZFC / ETCS / Dependent Types as foundation, so that it may formalize most of modern mathematics.&lt;/li&gt;
+&lt;li&gt;Improve automatic reasoning.&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <pubDate>Tue, 2 Apr 2024 09:46:43 +0200</pubDate>
+    </item>
+    <item>
+      <title>Leap Day 2024</title>
+      <link>https://mage-of-the-east.com/leap-2024</link>
+      <guid>https://mage-of-the-east.com/leap-2024</guid>
+      <description>&lt;h1&gt;Leap Day 2024&lt;/h1&gt;
+&lt;p&gt;It&apos;s Leap Day! Once every 4 years, or more accurately, 97 times every 400 years.&lt;/p&gt;
+&lt;p&gt;Daily routine is numbing, and time flies as we toil; but this not-so-rare calendar square reminds us to step out of our comfort zones and do the important things.&lt;/p&gt;
+&lt;p&gt;I&apos;ve set up &lt;strong&gt;29 goals&lt;/strong&gt; for myself that I hope to achieve by the next Leap Day, 2028-02-&lt;strong&gt;29&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/leap-2024&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 29 Feb 2024 09:15:40 +0100</pubDate>
+    </item>
+    <item>
+      <title>Rites of Passage</title>
+      <link>https://mage-of-the-east.com/hacker-rites</link>
+      <guid>https://mage-of-the-east.com/hacker-rites</guid>
+      <description>&lt;h1&gt;Rites of Passage&lt;/h1&gt;
+&lt;p&gt;I consider some programming projects to be &lt;strong&gt;rites of passage&lt;/strong&gt;: completing any of these projects gives you …&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hands-on experience on a hard problem;&lt;/li&gt;
+&lt;li&gt;deep understanding of a branch of computer science;&lt;/li&gt;
+&lt;li&gt;the right to boast.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below are some examples. This list is not intended as a judging tool for a programmer&apos;s strength, nor do I think everyone should try these tasks. But I believe they can be fun challenges for those who aim above and beyond.&lt;/p&gt;
+&lt;h2&gt;Foundations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Programming language&lt;ul&gt;
+&lt;li&gt;Must have a non-trivial syntax using infixes; think Python or Java, not Lisp or Forth.&lt;/li&gt;
+&lt;li&gt;Must be run in some way, whether interpreted, compiled, or transpiled.&lt;/li&gt;
+&lt;li&gt;Must support at least &lt;code&gt;stdin&lt;/code&gt;/&lt;code&gt;stdout&lt;/code&gt; and file I/O.&lt;/li&gt;
+&lt;li&gt;Must allow user-defined functions.&lt;/li&gt;
+&lt;li&gt;Must be Turing-complete in ideal conditions.&lt;/li&gt;
+&lt;li&gt;Bonus if it supports HTTP requests, GUI, or FFI.&lt;/li&gt;
+&lt;li&gt;Should be reasonably fast: a typical O(n) algorithm should not become O(n²), but O(n log n) is acceptable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Visual programming language&lt;ul&gt;
+&lt;li&gt;Similar to: Scratch or Blender nodes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Quine&lt;ul&gt;
+&lt;li&gt;Bonus if it&apos;s a &lt;a href=&quot;https://github.com/mame/quine-relay&quot;&gt;quine cycle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Version control&lt;ul&gt;
+&lt;li&gt;Similar to: Git.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Operating system&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Proof_assistant&quot;&gt;Proof checker / Proof assistant&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Must be able to verify formal proofs in first-order logic.&lt;/li&gt;
+&lt;li&gt;Milestone: verify formal proofs for the &lt;a href=&quot;https://en.wikipedia.org/wiki/Square_root_of_2&quot;&gt;irrationality of √2&lt;/a&gt; and the &lt;a href=&quot;https://en.wikipedia.org/wiki/Euclid%27s_theorem&quot;&gt;infinitude of primes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Sciences&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Scientific calculator&lt;ul&gt;
+&lt;li&gt;Infix or postfix (RPN) notation.&lt;/li&gt;
+&lt;li&gt;Bonus if it displays mathematical notation (for example, fractions written vertically).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Graphing calculator&lt;ul&gt;
+&lt;li&gt;Should support most mainstream graphs: lin-log, log-log, polar, 3D, cylindrical, spherical, contour, scalar/vector fields, parametric equations, and so on.&lt;/li&gt;
+&lt;li&gt;Bonus if it supports showing 2D/3D slices of higher-dimensional objects.&lt;/li&gt;
+&lt;li&gt;Harder than you think!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Physics engine&lt;ul&gt;
+&lt;li&gt;“Physics” in a general sense. Support for any subset of physics suffices: rigid body, soft body, fluid, optics, electronics, and so on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Data / Reasoning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Chess engine&lt;ul&gt;
+&lt;li&gt;May use either traditional or modern approaches.&lt;/li&gt;
+&lt;li&gt;Bonus if made into a &lt;a href=&quot;https://lichess.org/@/thibault/blog/how-to-create-a-lichess-bot/FuKyvDuB&quot;&gt;bot&lt;/a&gt; on a chess platform.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Neural network&lt;ul&gt;
+&lt;li&gt;Design and train a neural network to solve a non-trivial problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compression software&lt;ul&gt;
+&lt;li&gt;Any software that can compress and decompress a collection of files using a well-established or original compression algorithm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Encoder and decoder&lt;ul&gt;
+&lt;li&gt;For a common image/audio/video format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;User interfaces&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Text editor&lt;ul&gt;
+&lt;li&gt;May be CLI or GUI.&lt;/li&gt;
+&lt;li&gt;Must support undo/redo.&lt;/li&gt;
+&lt;li&gt;Bonus for good accessibility support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hex editor&lt;/li&gt;
+&lt;li&gt;Calendar&lt;ul&gt;
+&lt;li&gt;Supports ICS files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Map&lt;ul&gt;
+&lt;li&gt;Similar to: Open Street Map.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Spreadsheet&lt;/li&gt;
+&lt;li&gt;GUI toolkit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Auditory / Visual&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Digital audio workstation&lt;/li&gt;
+&lt;li&gt;Audio programming language&lt;ul&gt;
+&lt;li&gt;Similar to: SuperCollider&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Music player&lt;/li&gt;
+&lt;li&gt;3D renderer&lt;/li&gt;
+&lt;li&gt;Image processing / creation software&lt;ul&gt;
+&lt;li&gt;May support either raster or vector images.&lt;/li&gt;
+&lt;li&gt;Similar to: GIMP (raster), Inkscape (vector).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Font-rendering engine / Typesetting engine / Mathematical typesetting engine&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Music_engraving&quot;&gt;Music engraving&lt;/a&gt; engine&lt;!-- added --&gt;&lt;ul&gt;
+&lt;li&gt;Converts MusicXML to SVG/PDF/PNG.&lt;/li&gt;
+&lt;li&gt;Bonus if you can edit the source, WYSIWYG!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Network&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Web browser&lt;ul&gt;
+&lt;li&gt;Supports a small portion of the Web.&lt;/li&gt;
+&lt;li&gt;Must at least be able to view text-only, JS-free sites.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Forum / Bulletin board&lt;/li&gt;
+&lt;li&gt;Instant messaging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Game&lt;ul&gt;
+&lt;li&gt;An original, creative, enjoyable, non-trivial game.&lt;/li&gt;
+&lt;li&gt;See also: &lt;a href=&quot;https://ldjam.com/&quot;&gt;Ludum Dare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Generative art&lt;/li&gt;
+&lt;li&gt;Time zone converter&lt;!-- added --&gt;&lt;ul&gt;
+&lt;li&gt;Converts time (moments) between time zones.&lt;/li&gt;
+&lt;li&gt;May depend on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tz_database&quot;&gt;tz database&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Very hard to get correct!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <pubDate>Wed, 21 Feb 2024 21:06:15 +0100</pubDate>
+    </item>
+    <item>
+      <title>Web Audio: First Impression</title>
+      <link>https://mage-of-the-east.com/webaudio-prelude</link>
+      <guid>https://mage-of-the-east.com/webaudio-prelude</guid>
+      <description>&lt;h1&gt;Web Audio: First Impression&lt;/h1&gt;
+&lt;p&gt;Listen to Bach&apos;s “Prelude in C Major” implemented with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API&quot;&gt;Web Audio API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;(For the first time, listen without headphones on to avoid any unexpected volume.)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/webaudio-prelude&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 29 Jan 2024 23:38:19 +0100</pubDate>
+    </item>
+    <item>
+      <title>Ambigram Expressions (13.4 MiB)</title>
+      <link>https://mage-of-the-east.com/ambi-formula</link>
+      <guid>https://mage-of-the-east.com/ambi-formula</guid>
+      <description>&lt;h1&gt;Ambigram Expressions (13.4 MiB)&lt;/h1&gt;
+&lt;p&gt;Enter two integers &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt;, and receive an &lt;strong&gt;ambigram expression&lt;/strong&gt;: one that evaluates to &lt;em&gt;A&lt;/em&gt; right-side-up, and &lt;em&gt;B&lt;/em&gt; upside-down.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/ambi-formula&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sat, 2 Dec 2023 22:01:37 +0100</pubDate>
+    </item>
+    <item>
+      <title>Game of Strife</title>
+      <link>https://mage-of-the-east.com/auto-strife</link>
+      <guid>https://mage-of-the-east.com/auto-strife</guid>
+      <description>&lt;h1&gt;Game of Strife&lt;/h1&gt;
+&lt;p&gt;A multicolor version of the Game of Life.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/auto-strife&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 21 Nov 2023 06:20:40 +0100</pubDate>
+    </item>
+    <item>
+      <title>A simple Snake solver in 60 lines</title>
+      <link>https://mage-of-the-east.com/snake-solver</link>
+      <guid>https://mage-of-the-east.com/snake-solver</guid>
+      <description>&lt;h1&gt;A simple Snake solver in 60 lines&lt;/h1&gt;
+&lt;p&gt;Watch the computer play Snake using 60 lines of code of automation.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;This is an interactive article.&lt;/em&gt; &lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/snake-solver&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 19 Nov 2023 22:16:46 +0100</pubDate>
+    </item>
+    <item>
+      <title>Why Chess is played in Squares but Go (Weiqi) on Intersections</title>
+      <link>https://mage-of-the-east.com/grid-choice</link>
+      <guid>https://mage-of-the-east.com/grid-choice</guid>
+      <description>&lt;h1&gt;Why Chess is played in Squares but Go (Weiqi) on Intersections&lt;/h1&gt;
+&lt;p&gt;What caused the difference that &lt;a href=&quot;https://en.wikipedia.org/wiki/Chess&quot;&gt;Chess&lt;/a&gt; is played with pieces placed in squares, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Go_(game)&quot;&gt;Go (Weiqi)&lt;/a&gt; is played with stones placed on intersections, despite both games relying on a square grid?&lt;/p&gt;
+&lt;p&gt;The most reasonable explanation I can think of is &lt;strong&gt;practicality&lt;/strong&gt;. Bishops (and queens may) move diagonally; mentally visualizing a diagonal on a plain colorless grid is difficult and error-prone. On a checkered grid, the square colors are a visual aid to help the player make moves correctly, a &lt;a href=&quot;https://en.wikipedia.org/wiki/Parity_bit&quot;&gt;parity bit&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Parity is less of a concern for Go. When stones are placed on intersections, liberties (氣; breaths) are visualized by segments of the grid connected to the stone. Furthermore, when the board is filled with hundreds of stones, most of the grid is automatically hidden beneath the stones — whereas if stones had been played in the squares, the grid would have been visible all the time, which is distracting.&lt;/p&gt;</description>
+      <pubDate>Fri, 17 Nov 2023 22:13:45 +0100</pubDate>
+    </item>
+    <item>
+      <title>A Fever Dream</title>
+      <link>https://mage-of-the-east.com/gray-house</link>
+      <guid>https://mage-of-the-east.com/gray-house</guid>
+      <description>&lt;h1&gt;A Fever Dream&lt;/h1&gt;
+&lt;p&gt;A review of Mariam Petrosyan&apos;s &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Gray_House&quot;&gt;&lt;em&gt;The Gray House&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Personal rating: &lt;strong&gt;4&lt;/strong&gt;/5&lt;/p&gt;
+&lt;p&gt;Recommended if you like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;One Hundred Years of Solitude&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Never Let Me Go&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Logic of God, Magic of Humans&lt;/em&gt; (神のロジック 人間のマジック)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;The Gray House&lt;/em&gt; is a truly bizarre book. After reading the ending of this 720-page doorstop, I became utterly conflicted whether it is a rare gem or a stack of nonsense. I believe that almost everyone who read it will either love it dearly or hate it bitterly; very few would be neutral towards it.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Read more on&lt;/em&gt; &lt;a href=&quot;https://mage-of-the-east.com/gray-house&quot;&gt;mage-of-the-east.com&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 21 Sep 2023 21:28:04 +0200</pubDate>
+    </item>
+    <item>
+      <title>Saphyra: the Beginning</title>
+      <link>https://mage-of-the-east.com/blue-init</link>
+      <guid>https://mage-of-the-east.com/blue-init</guid>
+      <description>&lt;h1&gt;Saphyra: the Beginning&lt;/h1&gt;
+&lt;p&gt;A few years earlier I started developing &lt;a href=&quot;https://github.com/pennzht/saphyra&quot;&gt;&lt;strong&gt;Saphyra&lt;/strong&gt;&lt;/a&gt; for fun (called &lt;a href=&quot;https://github.com/pennzht/saphira&quot;&gt;Saphira&lt;/a&gt; then). My main goal was to build a simple proof assistant with a minimal kernel supporting multiple theories. I wanted to see how hard it was, both to build a proof assistant and to write proofs in it.&lt;/p&gt;
+&lt;p&gt;I restarted the project last year after a three-year hiatus, out of a desire to occupy myself with side projects on weekends. It&apos;s a “big clean problem” — one with a very clear goal, plenty of challenges, and an abundance of learning and experimenting opportunities.&lt;/p&gt;
+&lt;p&gt;Saphyra aims to be a proof assistant, similar to &lt;a href=&quot;https://en.wikipedia.org/wiki/Mizar_system&quot;&gt;Mizar&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/HOL_(proof_assistant)&quot;&gt;HOL&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Coq&quot;&gt;Coq&lt;/a&gt;. The program helps the user to write formal proofs of mathematical theorems that can be automatically verified, and the proof-writing process is also aided by some level of automation.&lt;/p&gt;
+&lt;p&gt;I aim to make Saphyra …&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lean:&lt;ul&gt;
+&lt;li&gt;The kernel — the program that checks the validity and rigor of proofs — should not exceed 1000 lines of code. The more code you have, the harder it is to verify its correctness.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;extensible:&lt;ul&gt;
+&lt;li&gt;The system should be easy to extend to support a wide range of logics: classical, intuitionistic, modal, linear; first-order, second-order, higher-order; set theories, type theories, category theories; and other user-defined systems of reasoning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;meta:&lt;ul&gt;
+&lt;li&gt;The system should be able to prove relations &lt;em&gt;between theories&lt;/em&gt;, such as that any EFA theorem is also a PRA theorem, and that ZFC proves the consistency of PA. To do this, we would use a relatively weak theory (such as EFA, PRA, PA, or ZF minus ∞) to show how proofs may be converted between theories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;easy to use:&lt;ul&gt;
+&lt;li&gt;Usability may be improved many ways: using a familiar (Python- or Java-like) syntax; providing analysis tools; training AIs to observe common patterns in proofs; and many others.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Saphyra is &lt;a href=&quot;https://github.com/pennzht/saphyra&quot;&gt;hosted on GitHub&lt;/a&gt;; stay tuned!&lt;/p&gt;</description>
+      <pubDate>Fri, 28 Apr 2023 21:55:08 +0200</pubDate>
+    </item>
+  </channel>
+</rss>
