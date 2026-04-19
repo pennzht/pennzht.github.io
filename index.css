@@ -130,3 +130,18 @@ details, blockquote {
     background-color: #7777771f;
 }
 
+.inline-chip {
+    display: inline-block;
+
+    padding: 0.25em;
+    border-radius: 0.25em;
+    line-height: 1;
+    background-color: var(--dark-magic);
+    color: var(--dark-text);
+    font-family: var(--heading);
+}
+
+.inline-chip a, .inline-chip a:hover {
+    color: var(--dark-text);
+    text-decoration: none;
+}
